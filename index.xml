@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<skin>
+<information>
+<name>리눅스킨 LinuXkin</name> 
+<version>4.0</version>
+<description>
+<![CDATA[ HTML5, CSS 3 기반으로 만들어진 Tistory 스킨입니다.]]>
+</description>
+<license>
+<![CDATA[자유롭게 수정이 가능하며, 재배포는 불가능합니다. 배포는 제작자의 홈페이지에서만 가능합니다.]]>
+</license>
+</information> 
+<author>
+<name>bskyvision</name>
+<homepage>https://bskyvision.com</homepage>
+<email>kyohoonsim@gmail.com</email>
+</author> 
+<default>
+<recentEntries>10</recentEntries> 
+<recentComments>10</recentComments>
+<recentTrackbacks>5</recentTrackbacks>
+<itemsOnGuestbook>10</itemsOnGuestbook>
+<tagsInCloud>30</tagsInCloud>
+<sortInCloud>3</sortInCloud> 
+<expandComment>0</expandComment>
+<expandTrackback>0</expandTrackback> 
+<lengthOfRecentNotice>50</lengthOfRecentNotice>
+<lengthOfRecentEntry>50</lengthOfRecentEntry>
+<lengthOfRecentComment>50</lengthOfRecentComment> 
+<lengthOfRecentTrackback>20</lengthOfRecentTrackback> 
+<lengthOfLink>20</lengthOfLink>
+<showListOnCategory>1</showListOnCategory>
+<showListOnArchive>1</showListOnArchive> 
+<commentMessage>
+<none>댓글이 없습니다.</none> 
+<single>댓글 &lt;span class="cnt"&gt;하나&lt;/span&gt; 달렸습니다.</single>
+</commentMessage>
+<trackbackMessage>
+<none>받은 트랙백이 없고</none>
+<single>트랙백이 &lt;span class="cnt"&gt;하나&lt;/span&gt;이고</single>
+</trackbackMessage> 
+<tree>
+<color>333333</color> 
+<bgColor>ffffff</bgColor>
+<activeColor>000000</activeColor> 
+<activeBgColor>eeeeee</activeBgColor>
+<labelLength>27</labelLength> 
+<showValue>1</showValue>
+</tree>
+<contentWidth>640</contentWidth>
+</default>
+</skin>
