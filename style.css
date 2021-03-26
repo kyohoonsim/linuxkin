@@ -425,7 +425,7 @@ header #header-menu a {
     margin: auto;
 }
 
-#container #article h2 {
+/* #container #article h2 {
     border-bottom: 1px solid #EAECEF;
     padding-bottom: 3px;
 }
@@ -438,7 +438,7 @@ header #header-menu a {
 #container #article h4 {
     border-bottom: 1px solid #EAECEF;
     padding-bottom: 3px;
-}
+} */
 
 #container #notice {
     color: black;
