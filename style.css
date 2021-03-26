@@ -679,7 +679,7 @@ header #header-menu a {
 }
 
 #container #category #category_in_list > ul > li {
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #EAECEF;
     margin-bottom: 5px;
     text-align: justify;
 }
