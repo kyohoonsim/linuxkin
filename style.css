@@ -246,7 +246,7 @@ header #header-menu a {
     overflow-x: hidden;
     cursor: default;
     z-index: 10;
-    transition: 0.5s;
+    /* transition: 0.5s; */
 }
 
 /* .sidenav::-webkit-scrollbar {
@@ -746,6 +746,7 @@ footer a:hover {
         display: block;
         width: 100%;
         position: static;
+        overflow: hidden;
 
     }
 
@@ -757,15 +758,6 @@ footer a:hover {
     #header-menu {
         display: none;
     }
-
-    /* #bulb {
-        display: inline-flex;
-        width: 32px;
-        height: 32px;
-        border-radius: 100%;
-        border: 1px solid white;
-        background-color: white;
-    } */
 
     #openbtn {
         display: inline;
@@ -781,7 +773,7 @@ footer a:hover {
         top: 52px;
         overflow-x: hidden;
         overflow-y: visible;
-        transition: 0.5s;
+        /* transition: 0.5s; */
         padding: 0;
         background-color: #212426;
         border-left: 2px solid black;
