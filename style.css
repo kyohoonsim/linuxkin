@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body,
 html {
     margin: 0;
@@ -147,7 +154,7 @@ header {
     z-index: 5;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    transition: 0.5s;
+    /* transition: 0.5s; */
 }
 
 header a {
@@ -511,7 +518,7 @@ header #header-menu a {
     text-align: justify;
 	font-size: large; 
     line-height: 1.5;
-	font-family: 'RIDIBatang';
+	font-family: 'NEXON Lv1 Gothic OTF';
 }
 
 .main-contents a {
@@ -719,7 +726,7 @@ footer {
     display:flex; 
     align-items: center;
     z-index: 5;
-    transition: 0.5s;
+    /* transition: 0.5s; */
 }
 
 footer a{
@@ -732,7 +739,7 @@ footer a:hover {
     color: #8CDCFE; 
 }
 
-@media (max-width:1150px){
+@media (max-width:800px){
 
 
     #container_and_sidebar {
