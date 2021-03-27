@@ -29,7 +29,7 @@
 
 
     </head>
-    <body>
+    <body style="visibility: hidden;" onload="js_Load()">
         <s_t3>
             <header>
                 
@@ -46,13 +46,12 @@
                 </span>
 
                 <span>
-                    <span style="font-size: medium; margin-right:5px;">kyohoonsim@gmail.com</span>
-                
+                    <span id="mode" style="margin-right:5px; font-size: x-large;"><i id="bulb" class="far fa-lightbulb" title="라이트모드" onclick="modechange();"></i></span>
 
                     <span
                         id ="openbtn"
                         class="openbtn"
-                        style="cursor:pointer; margin-right:5px;">
+                        style="cursor:pointer; margin-right:5px; font-size: x-large;">
                         <i class="fas fa-bars"></i>
                     </span> 
                 </span>
@@ -83,7 +82,7 @@
 
                                                 
                                                     <s_list_rep_thumbnail>
-                                                        <img style="width:80px; height:50px; min-width:80px; min-height:50px;" src="https://img1.daumcdn.net/thumb/R200x0/?scode=mtistory2&fname=[##_list_rep_thumbnail_##]">
+                                                        <img id="category_thumb" style="width:80px; height:50px; min-width:80px; min-height:50px;" src="https://img1.daumcdn.net/thumb/R200x0/?scode=mtistory2&fname=[##_list_rep_thumbnail_##]">
                                         
                                                     </s_list_rep_thumbnail>
                                                
@@ -168,8 +167,9 @@
                                 
 
                                 <s_tag_label>
-                                    <div class="tagTrail">
-                                        <span class="tags">태그 : [##_tag_label_rep_##]</span></div>
+                                    <div id="tagTrail">
+                                        <span class="tags">태그 : [##_tag_label_rep_##]</span>
+                                    </div>
                                 </s_tag_label>
                             </div>
                         </div>
@@ -220,14 +220,14 @@
                                             <div>
                                                 <input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox"/>
                                                 <label for="secret">
-                                                    비밀글
+                                                    secret
                                                 </label>
                                             </div>
                                         </s_rp_member>
                                         <div id="login-guide">
                                             <textarea class="textarea" name="[##_rp_input_comment_##]" rows="10" cols="40"></textarea>
                                         </div>
-                                        <input type="submit" value="댓글 입력" onclick="[##_rp_onclick_submit_##]"/>
+                                        <input type="submit" class="submit_button" value="댓글 입력" onclick="[##_rp_onclick_submit_##]"/>
                                     </div>
                                 </s_rp_input_form>
 
@@ -348,7 +348,7 @@
                                                 class="checkbox"
                                                 value="1"/>
                                             <label for="[##_guest_input_is_secret_##]">
-                                                <span class="secret">비밀글</span></label>
+                                                <span class="secret">secret</span></label>
                                         </div>
                                     </s_guest_member>
                                     <div>
@@ -360,6 +360,7 @@
                                     </div>
                                     <div><input
                                         type="submit"
+                                        class="submit_button"
                                         value="방명록 쓰기"
                                         onclick="[##_guest_onclick_submit_##]"/></div>
                                 </s_guest_input_form>
@@ -497,16 +498,7 @@
 
                     <!-- 카피라이터 부분입니다. 절대 수정하시면 안됩니다! -->
                     <div id="copy">
-                        <div id="copyleft">Copyleft ⓒ
-                            <a href="https://bskyvision.com">bskyvision (리눅스킨 v4.0)</a>
-                        </div>
-                        <div id="copyright">Copyright ⓒ
-                            <a href="[##_blog_link_##]">[##_title_##]</a>
-                        </div>
-                        <div>
-                            이 페이지는 리디주식회사에서 제공한 리디바탕 글꼴이 사용되어 있습니다.
-                        </div>
-                        <br><br>
+                         ⓒ <a href="[##_blog_link_##]">[##_title_##]</a>. Designed by <a href="https://bskyvision.com/" title="스킨개발자">bskyvision.</a>    
                     </div>
 
                     <!--푸터 시작-->
@@ -782,7 +774,19 @@
 
         <script>
 
+            // $(window).load(function(){
+                
+            // });
+
             $(document).ready(function(){
+                var Mode = localStorage["Mode"];
+                if (Mode=="lightmode"){
+                    modechange();
+                } 
+                if (Mode=="darkmode"){
+                    modechange1();
+                }
+
                 $(document).on("click", ".openbtn", function (e){
                     var target = $("#sidebar-mobile");
                     target.show();
@@ -796,7 +800,47 @@
                         $('#sidebar-mobile').removeClass('emphasized');
                     } 
                 });
+
             });
+
+            function modechange(){
+                    localStorage["Mode"] = "lightmode";
+                    $("#container").css({"background-color":"white"});
+                    $("#article").css({"color":"black"});
+                    $("#notice").css({"color":"black"});
+                    $("#protect").css({"color":"black"});
+                    $("#comment a").css({"color":"black"});
+                    $("#comment #commentWrite").css({"color":"black"});
+                    $("#comment #commentList").css({"color":"black"});
+                    $("#guest a").css({"color":"black"});
+                    $("#guest #repond").css({"color":"black"});
+                    $("#guest #guest_list").css({"color":"black"});
+                    $("#category a ").css({"color":"black"});
+                    $("#mode").css({"color":"yellow"});
+                    $("#mode").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드' onclick=" + "'modechange1();'></i>");
+            };
+
+            function modechange1(){
+                    localStorage["Mode"] = "darkmode";
+                    $("#container").css({"background-color":"#141617"});
+                    $("#article").css({"color":"white"});
+                    $("#notice").css({"color":"white"});
+                    $("#protect").css({"color":"white"});
+                    $("#comment a").css({"color":"white"});
+                    $("#comment #commentWrite").css({"color":"white"});
+                    $("#comment #commentList").css({"color":"white"});
+                    $("#guest a").css({"color":"white"});
+                    $("#guest #repond").css({"color":"white"});
+                    $("#guest #guest_list").css({"color":"white"});
+                    $("#category a ").css({"color":"white"});
+                    $("#mode").css({"color":"white"});
+                    $("#mode").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드' onclick=" + "'modechange();'></i>");
+            };
+
+            function js_Load(){
+                document.body.style.visibility='visible';
+            }
+
         </script>
 
 
