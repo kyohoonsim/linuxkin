@@ -16,7 +16,7 @@ body,
 html {
     margin: 0;
     color: white;
-    background-color: white;
+    background-color: #141617;
     font-size: medium;
     font-family: 'Nanum Gothic', sans-serif;
     overflow-x: hidden;
@@ -28,12 +28,12 @@ html {
     box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
 	width: 20px;
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: yellow; /*스크롤바의 색상*/
+	background-color: yellow; 
     background-clip: padding-box;
     border: 4px solid transparent;
     border-top-left-radius: 50px;
@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
 	background-color: grey;
-}
+} */
 
 a {
     text-decoration: none;
@@ -83,6 +83,7 @@ a:hover {
     border-radius: 100%;
     box-shadow: 1px 1px 3px 1px #dadce0;
 }
+
 
 .rp_admin img {
     display: none;
@@ -190,32 +191,31 @@ header #header-menu a {
 
 /* 공감버튼 조절용 */ 
 
-.container_postbtn { 
-    width:210px; 
-    margin:auto; 
-    padding: 24px 0 24px 68px !important; 
-} 
+.container_postbtn {
+    text-align:center;
+}
 
-.postbtn_like {
-    border: 5px inset deeppink !important;
+.container_postbtn .postbtn_like {
+    float:none !important; 
+    display: inline-block;
     border-radius: 0 !important;
-    background-color: pink;
+    border-left: 5px #0096c6 solid !important;
+    box-shadow: lightgrey 1px 1px 5px 1px;
+    font-weight: bold !important;
 }
 
-.container_postbtn:before { 
-    white-space: pre; 
-    overflow-wrap: break-word; 
-    color: deeppink; 
-    font-size: 20px; 
-    font-weight: bold; 
-    content: "   ↓↓ 도움이 되셨다면"; 
-    /* position: relative; 
-    left: -90px; */
-    padding-bottom: 20px !important;
-    
+.container_postbtn .btn_subscription {
+    display: block;
 }
 
-/* */
+.container_postbtn .postbtn_like + .btn_menu_toolbar {
+    margin: auto !important; 
+    border-radius: 0;
+    border-left: 5px #0096c6 solid;
+    box-shadow: lightgrey 1px 1px 5px 1px;
+    font-weight: bold !important;
+}
+
 #container_and_sidebar {
     display: grid;
     grid-template-columns: 1fr 350px;
@@ -249,12 +249,12 @@ header #header-menu a {
     transition: 0.5s;
 }
 
-.sidenav::-webkit-scrollbar {
+/* .sidenav::-webkit-scrollbar {
 	width: 5px;
 }
 
 .sidenav::-webkit-scrollbar-thumb {
-	background-color: yellow; /*스크롤바의 색상*/
+	background-color: yellow; 
     background-clip: padding-box;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -262,7 +262,7 @@ header #header-menu a {
 
 .sidenav::-webkit-scrollbar-track {
 	background-color: darkgrey;
-}
+} */
 
 
 
@@ -413,52 +413,54 @@ header #header-menu a {
 #container {
     width: 100%;
     height: 100%;
+    /* min-height: 100vh; */
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
 #container #article {
-    color: black;
+    color: white;
     padding: 20px;
     max-width: 800px;
     margin: auto;
 }
 
-/* #container #article h2 {
-    border-bottom: 1px solid #EAECEF;
-    padding-bottom: 3px;
+#container #article img {
+    background-color: white;
 }
 
-#container #article h3 {
+#container #article li {
     border-bottom: 1px solid #EAECEF;
-    padding-bottom: 3px;
 }
-
-#container #article h4 {
-    border-bottom: 1px solid #EAECEF;
-    padding-bottom: 3px;
-} */
 
 #container #notice {
-    color: black;
+    color: white;
     padding: 20px;
     max-width: 800px;
     margin: auto;
+}
+
+#container #notice img {
+    background-color: white;
 }
 
 #container #protect {
-    color: black;
+    color: white;
     padding: 20px;
     max-width: 800px;
     margin: auto;
 }
 
 #container #category {
-    color: black;
+    color: white;
     padding: 20px;
     max-width: 800px;
     margin: auto;
+}
+
+#container #category #category_thumb {
+    background-color: white;
 }
 
 .main-title {
@@ -507,26 +509,25 @@ header #header-menu a {
 
 .main-contents {
     text-align: justify;
-		font-size: large; 
+	font-size: large; 
     line-height: 1.5;
-	  font-family: 'RIDIBatang';
+	font-family: 'RIDIBatang';
 }
 
-/* .main-contents img {
-	border: 2px dashed dodgerblue;
-	box-shadow: 2px 2px 3px 3px #dadce0;
-} */
+.main-contents a {
+    text-decoration: underline;
+}
 
-#container #protect input {
+/* #container #protect input {
     border: solid 1px rgb(31, 25, 25); 
     background: transparent; 
     color:black; 
     outline: none; 
-}
+} */
 
 
 #container #comment a {
-    color: black;
+    color: white;
 }
 
 #container #comment a:hover {
@@ -536,27 +537,12 @@ header #header-menu a {
 #container #comment #commentWrite {
     margin-top: 20px;
     margin-bottom: 30px;
-    color: black;
+    /* color: white; */
 }
 
-#container #comment #commentWrite input {
-    background-color: hotpink; 
-    box-shadow: 1px 1px 2px 1px #dadce0; 
-    color:white;
-}
-
-#container #comment #commentWrite textarea {
-    margin-top: 20px;
-    border: solid 1px black; 
-    /* background: transparent;  */
-    background-color: lightgoldenrodyellow;
-    color: black; 
-    outline: none; 
-    box-shadow: 1px 1px 2px 1px #dadce0;
-}
 
 #container #comment #commentList {
-    color: black;
+    /* color: white; */
     text-align: justify;
     max-width: 800px;
     margin: auto;
@@ -571,16 +557,15 @@ header #header-menu a {
 #container #comment #commentList > ol > li {
     list-style: none;
     padding-left: 0;
-    border-bottom: solid 1px black;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    border-top: solid 1px #EAECEF;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
 }
 
 #container #comment #commentList > ol > li > ul > li {
     list-style: none;
     padding-left: 0;
-    border-top: solid 1px black;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 5px;
@@ -588,12 +573,8 @@ header #header-menu a {
 
 
 
-#container #guest {
-    /* padding: 20px; */
-}
-
 #container #guest a {
-    color: black;
+    color: white;
 }
 
 #container #guest a:hover {
@@ -603,23 +584,7 @@ header #header-menu a {
 #container #guest #respond {
     margin-top: 20px;
     margin-bottom: 30px;
-    color: black;
-}
-
-#container #guest #respond input {
-    background-color: hotpink; 
-    box-shadow: 1px 1px 3px 1px #dadce0; 
-    color:white;
-}
-
-#container #guest #respond textarea {
-    margin-top: 20px;
-    border: solid 1px black; 
-    /* background: transparent;  */
-    background-color: lightgoldenrodyellow;
-    color:black; 
-    outline: none; 
-    box-shadow: 1px 1px 2px 1px #dadce0;
+    /* color: white; */
 }
 
 
@@ -628,7 +593,7 @@ header #header-menu a {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    color: black;
+    /* color: white; */
 }
 
 #container #guest #guest_list > ol {
@@ -642,16 +607,16 @@ header #header-menu a {
     padding-left: 0;
     list-style: none;
     margin: 0;
-    border-bottom: solid 1px black;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    border-top: solid 1px #EAECEF;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
 }
 
 #container #guest #guest_list > ol > li > ul > li {
     list-style: none;
     padding-top: 5px;
-    border-top: solid 1px black;
+    /* border-top: solid 1px #EAECEF; */
     padding-bottom: 5px;
     margin-top: 5px;
 }
@@ -665,7 +630,7 @@ header #header-menu a {
 
 
 #container #category a {
-    color: black;
+    color: white;
 }
 
 #container #category a:hover {
@@ -684,6 +649,11 @@ header #header-menu a {
     text-align: justify;
 }
 
+
+
+#tagTrail a {
+    text-decoration: none;
+}
 
 #container #tags {
     text-align: justify;
@@ -720,11 +690,19 @@ header #header-menu a {
 
 
 #copy {
-    color: black;
+    display: inline;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    float: left;
 }
 
 #copy a {
-    color: black;
+    color: white;
+}
+
+.og-text {
+    background-color: white;
 }
 
 /*푸터 CSS*/
@@ -780,6 +758,15 @@ footer a:hover {
         display: none;
     }
 
+    /* #bulb {
+        display: inline-flex;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        border: 1px solid white;
+        background-color: white;
+    } */
+
     #openbtn {
         display: inline;
     }
@@ -808,12 +795,12 @@ footer a:hover {
         color: hotpink;
     }
 
-    .sidenav-mobile::-webkit-scrollbar {
+    /* .sidenav-mobile::-webkit-scrollbar {
         width: 5px;
     }
     
     .sidenav-mobile::-webkit-scrollbar-thumb {
-        background-color: yellow; /*스크롤바의 색상*/
+        background-color: yellow; 
         background-clip: padding-box;
         border-top-left-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -821,6 +808,6 @@ footer a:hover {
     
     .sidenav-mobile::-webkit-scrollbar-track {
         background-color: darkgrey;
-    }
+    } */
     
 }

@@ -2,7 +2,7 @@
 <skin>
 <information>
 <name>리눅스킨 LinuXkin</name> 
-<version>4.0</version>
+<version>4.1</version>
 <description>
 <![CDATA[ HTML5, CSS 3 기반으로 만들어진 Tistory 스킨입니다.]]>
 </description>
@@ -17,8 +17,8 @@
 </author> 
 <default>
 <recentEntries>10</recentEntries> 
-<recentComments>10</recentComments>
-<recentTrackbacks>5</recentTrackbacks>
+<recentComments>20</recentComments>
+<recentTrackbacks>10</recentTrackbacks>
 <itemsOnGuestbook>10</itemsOnGuestbook>
 <tagsInCloud>30</tagsInCloud>
 <sortInCloud>3</sortInCloud> 
@@ -27,7 +27,7 @@
 <lengthOfRecentNotice>50</lengthOfRecentNotice>
 <lengthOfRecentEntry>50</lengthOfRecentEntry>
 <lengthOfRecentComment>50</lengthOfRecentComment> 
-<lengthOfRecentTrackback>20</lengthOfRecentTrackback> 
+<lengthOfRecentTrackback>50</lengthOfRecentTrackback> 
 <lengthOfLink>20</lengthOfLink>
 <showListOnCategory>1</showListOnCategory>
 <showListOnArchive>1</showListOnArchive> 
