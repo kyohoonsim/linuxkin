@@ -427,7 +427,7 @@ header #header-menu a {
 }
 
 #container #article {
-    color: white;
+    color: lightgray;
     padding: 20px;
     max-width: 800px;
     margin: auto;
@@ -442,7 +442,7 @@ header #header-menu a {
 }
 
 #container #notice {
-    color: white;
+    color: lightgray;
     padding: 20px;
     max-width: 800px;
     margin: auto;
@@ -453,7 +453,7 @@ header #header-menu a {
 }
 
 #container #protect {
-    color: white;
+    color: lightgray;
     padding: 20px;
     max-width: 800px;
     margin: auto;
@@ -525,16 +525,9 @@ header #header-menu a {
     text-decoration: underline;
 }
 
-/* #container #protect input {
-    border: solid 1px rgb(31, 25, 25); 
-    background: transparent; 
-    color:black; 
-    outline: none; 
-} */
-
 
 #container #comment a {
-    color: white;
+    color: lightgray;
 }
 
 #container #comment a:hover {
@@ -544,12 +537,11 @@ header #header-menu a {
 #container #comment #commentWrite {
     margin-top: 20px;
     margin-bottom: 30px;
-    /* color: white; */
+    color: lightgray;
 }
 
-
 #container #comment #commentList {
-    /* color: white; */
+    color: lightgray;
     text-align: justify;
     max-width: 800px;
     margin: auto;
@@ -581,7 +573,7 @@ header #header-menu a {
 
 
 #container #guest a {
-    color: white;
+    color: lightgray;
 }
 
 #container #guest a:hover {
@@ -591,7 +583,7 @@ header #header-menu a {
 #container #guest #respond {
     margin-top: 20px;
     margin-bottom: 30px;
-    /* color: white; */
+    color: lightgray;
 }
 
 
@@ -600,7 +592,7 @@ header #header-menu a {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    /* color: white; */
+    color: lightgray;
 }
 
 #container #guest #guest_list > ol {
@@ -623,7 +615,6 @@ header #header-menu a {
 #container #guest #guest_list > ol > li > ul > li {
     list-style: none;
     padding-top: 5px;
-    /* border-top: solid 1px #EAECEF; */
     padding-bottom: 5px;
     margin-top: 5px;
 }
@@ -637,7 +628,7 @@ header #header-menu a {
 
 
 #container #category a {
-    color: white;
+    color: lightgray;
 }
 
 #container #category a:hover {
