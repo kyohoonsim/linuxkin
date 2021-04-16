@@ -735,6 +735,22 @@ footer a:hover {
     color: #8CDCFE; 
 }
 
+
+/* background-color: #fff;
+    color: rgba(0,0,0,.9);
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 10%), 0 2px 5px rgb(0 0 0 / 10%);
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition-duration: .1s;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: .9rem; */
+
+
 @media (max-width:800px){
 
 
