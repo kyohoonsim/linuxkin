@@ -6,6 +6,7 @@
         <meta name="author" content="[##_blogger_##]">
         <meta name="description" content="[##_desc_##]">
         <meta name="generator" content="bskyvision">
+        
 
         <title>[##_page_title_##] by [##_title_##]</title>
         <link rel="stylesheet" href="./style.css">
@@ -183,54 +184,58 @@
                                 
 
                                 <s_rp_container>
+
                                     <div id="commentList">
+                                        <div style="border-top: dashed 2px gray; border-bottom: dashed 2px gray;">
+                                            <p>방문해주신 모든 분들을 환영합니다.</p>
+                                            <p> * 글을 읽던 중에 궁금했던 부분은 질문해주세요.</p>
+                                            <p> * 칭찬, 지적, 의문, 격려, 감사표현 등을 남겨주세요.</p>
+                                            <p> * 욕설과 광고를 담은 댓글은 가차없이 삭제합니다.</p>
+                                        </div>
                                         <ol>
                                             <s_rp_rep>
                                                 <li id='[##_rp_rep_id_##]'>
-                                                    <div class="[##_rp_rep_class_##] sidebar_grid_logo">
+                                                    <div class="[##_rp_rep_class_##]">
 
-                                                        <div class="reply-logo" style="background-image:url('[##_rp_rep_logo_##]')"></div>
+                                                        <span class="reply-linux">
+                                                            <strong>[##_rp_rep_name_##]</strong>@[##_rp_rep_date_##]
+                                                        </span> 
+                                                        ~$ [##_rp_rep_desc_##] <br>
+                                                        <span style="font-size: x-small; float:right;">
+                                                            <a href="[##_rp_rep_link_##]" class="address">
+                                                                [댓글주소]
+                                                            </a>
+                                                            <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;[수정/삭제]
+                                                                
+                                                            </a>
+                                                            <a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write">&nbsp;
+                                                                [답글작성]
+                                                            </a>
+                                                        </span>
+                                                        <br>
 
-                                                        <div>        
-                                                            <span style="font-weight: bold; font-size: large;">[##_rp_rep_name_##]</span><br>
-                                                            <span style="font-size: x-small;">
-                                                                [##_rp_rep_date_##]</span>
-                                                                <br>
-                                                            <span style="font-size: x-small;">
-                                                                <a href="[##_rp_rep_link_##]" class="address">
-                                                                    <i class="fas fa-at" title="댓글주소"></i>
-                                                                </a>
-                                                                <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;
-                                                                    <i class="far fa-edit" title="수정/삭제"></i>
-                                                                </a>
-                                                                <a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write">&nbsp;
-                                                                    <i class="fas fa-reply" title="답글쓰기"></i>
-                                                                </a>
-                                                            </span>
-                                                        </div>
-
-                                                        <div style="text-align:right;">[##_rp_rep_desc_##]</div>
                                                     </div>
                                                     <s_rp2_container>
                                                         <ul>
                                                             <s_rp2_rep>
                                                                 <li id='[##_rp_rep_id_##]'>
-                                                                    <div class="[##_rp_rep_class_##] sidebar_grid_logo">
-                                                                        <div class="reply-logo" style="background-image:url('[##_rp_rep_logo_##]')"></div>
-                                                                        <div>
-                                                                            <span style="font-weight: bold; font-size: large;">[##_rp_rep_name_##]</span><br>
-                                                                            <span style="font-size: x-small;">
-                                                                                [##_rp_rep_date_##]</span><br>
-                                                                            <span style="font-size: x-small;">
-                                                                                <a href="[##_rp_rep_link_##]" class="address">
-                                                                                    <i class="fas fa-at" title="댓글주소"></i>
-                                                                                </a>
-                                                                                <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;
-                                                                                    <i class="far fa-edit" title="수정/삭제"></i>
-                                                                                </a>
-                                                                            </span>
-                                                                        </div>
-                                                                        <div style="text-align:right;">[##_rp_rep_desc_##]</div>
+                                                                    <div class="[##_rp_rep_class_##]">
+                                                                        
+                                                                        <span class="reply-linux1">
+                                                                            <strong>[##_rp_rep_name_##]</strong>@[##_rp_rep_date_##]
+                                                                        </span> 
+                                                                        ~$ [##_rp_rep_desc_##] <br>
+                                                                        <span style="font-size: x-small; float:right;">
+                                                                            <a href="[##_rp_rep_link_##]" class="address">
+                                                                                [댓글주소]
+                                                                            </a>
+                                                                            <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;[수정/삭제]
+                                                                                
+                                                                            </a>
+                                                                            
+                                                                        </span>
+                                                                        <br>
+
                                                                     </div>
                                                                 </li>
                                                             </s_rp2_rep>
@@ -247,36 +252,37 @@
                                     <div id="commentWrite">
                                         <s_rp_member>
                                             <s_rp_guest>
-
-                                                
-
-
-
-																							 
+                                                   
                                                 <div>
+                                                    <span class="reply-linux2">guest@이름</span> ~$ <br>
                                                     <input
+                                                        style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
                                                         type="text"
                                                         name="[##_rp_input_name_##]"
                                                         value="[##_guest_name_##]"
-                                                        placeholder="이름"/>
+                                                        placeholder="필수"/>
 
                                                 </div>
                                                 <div>
+                                                    <span class="reply-linux2">guest@패스워드</span> ~$ <br>
                                                     <input
+                                                        style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
                                                         type="password"
                                                         maxlength="8"
                                                         name="[##_rp_input_password_##]"
                                                         value="[##_rp_admin_check_##]"
-                                                        placeholder="비밀번호"/>
+                                                        placeholder="필수"/>
 
                                                 </div>
                                                 <div>
+                                                    <span class="reply-linux2">guest@홈페이지주소작성</span> ~$ <br>
                                                     <input
+                                                        style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
                                                         type="text"
                                                         class="homepage"
                                                         name="[##_rp_input_homepage_##]"
                                                         value="[##_guest_homepage_##]"
-                                                        placeholder="홈페이지"/>
+                                                        placeholder="선택사항"/>
 
                                                 </div>
                                             </s_rp_guest>
@@ -285,12 +291,18 @@
                                                 <label for="secret">
                                                     secret
                                                 </label>
+                                                
                                             </div>
+                                            <br>
                                         </s_rp_member>
                                         <div id="login-guide">
-                                            <textarea class="textarea" name="[##_rp_input_comment_##]" rows="10" cols="40"></textarea>
-                                        </div>
-                                        <input type="submit" class="submit_button" value="댓글 입력" onclick="[##_rp_onclick_submit_##]"/>
+                                            <span class="reply-linux2">guest@댓글작성</span> ~$ <br> 
+                                            <textarea style="margin-top: 10px; width: 100%; height:100px; border: none; background: white; color:black; outline: none;" name="[##_rp_input_comment_##]"></textarea> <br> 
+                                            
+                                            <input style="float:right; border: none; background: transparent; color:white; outline: none; font-size:medium;" type="submit" value="[댓글 입력]" onclick="[##_rp_onclick_submit_##]"/>
+                                        </div> 
+
+                                        
                                     </div>
                                 </s_rp_input_form>
                             </s_rp>

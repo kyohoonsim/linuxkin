@@ -436,7 +436,7 @@ header #header-menu a {
 #container #article {
     color: lightgray;
     padding: 20px;
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: auto;
 }
 
@@ -533,9 +533,9 @@ header #header-menu a {
 }
 
 
-/* #container #comment {
-    background-color: #141617;
-} */
+#container #comment {
+    text-align: justify;
+} 
 
 #container #comment a {
     color: lightgray;
@@ -549,6 +549,7 @@ header #header-menu a {
     margin-top: 20px;
     margin-bottom: 30px;
     color: lightgray;
+    padding: 20px;
 }
 
 #container #comment #commentList {
@@ -567,7 +568,7 @@ header #header-menu a {
 #container #comment #commentList > ol > li {
     list-style: none;
     padding-left: 0;
-    border-top: solid 1px #EAECEF;
+    /* border-top: solid 1px #EAECEF; */
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -741,6 +742,29 @@ footer a:hover {
     color: #8CDCFE; 
 }
 
+.reply-linux {
+    color:#8AE234;
+}
+
+.reply-linux a {
+    color:#8AE234;
+}
+
+.reply-linux1 {
+    color:blue;
+}
+
+.reply-linux1 a {
+    color:blue;
+}
+
+.reply-linux2 {
+    color:hotpink;
+}
+
+.reply-linux2 a {
+    color:hotpink;
+}
 
 @media (max-width:800px){
 
