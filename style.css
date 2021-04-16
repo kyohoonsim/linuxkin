@@ -546,8 +546,8 @@ header #header-menu a {
 }
 
 #container #comment #commentWrite {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin: auto;
+    max-width: 800px;
     color: lightgray;
     padding: 20px;
 }
