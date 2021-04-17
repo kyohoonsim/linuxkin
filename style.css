@@ -35,6 +35,11 @@ html {
     box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
 }
 
+/* 티스토리 도메인으로 이동 버튼 */
+#convert a:hover {
+    color: white;
+}
+
 /* 쿠팡 다크모드 대비 */
 iframe {
 	background-color: white;
