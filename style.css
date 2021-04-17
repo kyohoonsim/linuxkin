@@ -441,7 +441,7 @@ header #header-menu a {
 #container #article {
     color: lightgray;
     padding: 20px;
-    /* max-width: 800px; */
+    max-width: 800px;
     margin: auto;
 }
 
