@@ -35,6 +35,11 @@ html {
     box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
 }
 
+/* 티스토리 도메인으로 이동 버튼 */
+#convert a:hover {
+    color: white;
+}
+
 /* 쿠팡 다크모드 대비 */
 iframe {
 	background-color: white;
@@ -425,6 +430,8 @@ header #header-menu a {
 #container {
     width: 100%;
     height: 100%;
+    background-color: #141617;
+
     /* min-height: 100vh; */
     text-align: center;
     margin-left: auto;
@@ -531,6 +538,10 @@ header #header-menu a {
 }
 
 
+#container #comment {
+    text-align: justify;
+} 
+
 #container #comment a {
     color: lightgray;
 }
@@ -540,9 +551,10 @@ header #header-menu a {
 }
 
 #container #comment #commentWrite {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin: auto;
+    max-width: 800px;
     color: lightgray;
+    padding: 20px;
 }
 
 #container #comment #commentList {
@@ -561,10 +573,14 @@ header #header-menu a {
 #container #comment #commentList > ol > li {
     list-style: none;
     padding-left: 0;
-    border-top: solid 1px #EAECEF;
+    /* border-top: solid 1px #EAECEF; */
     padding-top: 10px;
     padding-bottom: 10px;
 
+}
+
+#container #comment #commentList > ol > li > ul {
+    padding-left: 0;
 }
 
 #container #comment #commentList > ol > li > ul > li {
@@ -575,7 +591,9 @@ header #header-menu a {
     margin-top: 5px;
 }
 
-
+#container #guest {
+    text-align: justify;
+} 
 
 #container #guest a {
     color: lightgray;
@@ -586,9 +604,10 @@ header #header-menu a {
 }
 
 #container #guest #respond {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin: auto;
+    max-width: 800px;
     color: lightgray;
+    padding: 20px;
 }
 
 
@@ -611,10 +630,14 @@ header #header-menu a {
     padding-left: 0;
     list-style: none;
     margin: 0;
-    border-top: solid 1px #EAECEF;
+    /* border-top: solid 1px #EAECEF; */
     padding-top: 10px;
     padding-bottom: 10px;
 
+}
+
+#container #guest #guest_list > ol > li > ul {
+    padding-left: 0;
 }
 
 #container #guest #guest_list > ol > li > ul > li {
@@ -677,18 +700,20 @@ header #header-menu a {
 #paging a {
     text-decoration: none;
     font-size: large;
-    color: dodgerblue;
+    color: white;
 }
 
 #paging a:hover {
-    text-decoration: none;
-    color: hotpink; 
+    /* text-decoration: underline; */
+    font-size: larger;
+    /* color: hotpink;  */
 }
 
 #paging .selected {
-    color: hotpink;
-    text-decoration: none;
+    /* color: hotpink; */
+    /* text-decoration: underline; */
     font-weight: bold;
+    font-size: larger;
 }
 
 
@@ -735,21 +760,45 @@ footer a:hover {
     color: #8CDCFE; 
 }
 
+.reply-linux {
+    color:#8AE234;
+}
 
-/* background-color: #fff;
-    color: rgba(0,0,0,.9);
-    box-shadow: 0 0 0 1px rgb(0 0 0 / 10%), 0 2px 5px rgb(0 0 0 / 10%);
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    transition-duration: .1s;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    border-radius: 50%;
-    font-size: .9rem; */
+.reply-linux a {
+    color:#8AE234 !important; 
+}
 
+.reply-linux1 {
+    color:blue;
+}
+
+.reply-linux1 a {
+    color:blue !important;
+}
+
+.reply-linux2 {
+    color:#8AE234;
+}
+
+.reply-linux2 a {
+    color:#8AE234;
+}
+
+.address {
+    color: aqua !important;
+} 
+
+.write {
+    color: aqua !important;
+}
+
+.modify {
+    color: aqua !important;
+}
+
+.tistoryProfileLayerTrigger {
+    display: none !important;
+}
 
 @media (max-width:800px){
 
