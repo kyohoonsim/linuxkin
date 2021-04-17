@@ -190,6 +190,7 @@
                                             <p>방문해주신 모든 분들을 환영합니다.</p>
                                             <p> * 글을 읽던 중에 궁금했던 부분은 질문해주세요.</p>
                                             <p> * 칭찬, 지적, 의문, 격려, 감사표현 등을 남겨주세요.</p>
+                                            <p> * 최대한 답변 드리도록 노력하겠습니다.</p>
                                             <p> * 욕설과 광고를 담은 댓글은 가차없이 삭제합니다.</p>
                                         </div>
                                         <ol>
@@ -198,18 +199,17 @@
                                                     <div class="[##_rp_rep_class_##]">
 
                                                         <span class="reply-linux">
-                                                            <strong>[##_rp_rep_name_##]</strong>@[##_rp_rep_date_##]
+                                                            [##_rp_rep_name_##]@[##_rp_rep_date_##]
                                                         </span> 
-                                                        ~$ [##_rp_rep_desc_##] <br>
-                                                        <span style="font-size: x-small; float:right;">
+                                                        ~$ [##_rp_rep_desc_##] 
+                                                        <span>
                                                             <a href="[##_rp_rep_link_##]" class="address">
                                                                 [댓글주소]
                                                             </a>
                                                             <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;[수정/삭제]
                                                                 
                                                             </a>
-                                                            <a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write">&nbsp;
-                                                                [답글작성]
+                                                            <a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write">&nbsp;[답글작성]
                                                             </a>
                                                         </span>
                                                         <br>
@@ -222,10 +222,10 @@
                                                                     <div class="[##_rp_rep_class_##]">
                                                                         
                                                                         <span class="reply-linux1">
-                                                                            <strong>[##_rp_rep_name_##]</strong>@[##_rp_rep_date_##]
+                                                                            [##_rp_rep_name_##]@[##_rp_rep_date_##]
                                                                         </span> 
-                                                                        ~$ [##_rp_rep_desc_##] <br>
-                                                                        <span style="font-size: x-small; float:right;">
+                                                                        ~$ <span style="color: hotpink;">[답글]:</span> [##_rp_rep_desc_##] 
+                                                                        <span>
                                                                             <a href="[##_rp_rep_link_##]" class="address">
                                                                                 [댓글주소]
                                                                             </a>
@@ -300,6 +300,7 @@
                                             <textarea style="margin-top: 10px; width: 100%; height:100px; border: none; background: white; color:black; outline: none;" name="[##_rp_input_comment_##]"></textarea> <br> 
                                             
                                             <input style="float:right; border: none; background: transparent; color:white; outline: none; font-size:medium;" type="submit" value="[댓글 입력]" onclick="[##_rp_onclick_submit_##]"/>
+                                            <br>
                                         </div> 
 
                                         
@@ -497,15 +498,14 @@
                     <!--페이징 시작-->
                     <s_paging>
                         <div id="paging">
-                            <a [##_prev_page_##]="[##_prev_page_##]" class="[##_no_more_prev_##]">◀
+                            <a [##_prev_page_##]="[##_prev_page_##]" class="[##_no_more_prev_##]">[이전]
                             </a>
                             <span>
                                 <s_paging_rep>
-                                    <a class="numbox" [##_paging_rep_link_##]="[##_paging_rep_link_##]">[##_paging_rep_link_num_##]</a>
+                                    <a class="numbox" [##_paging_rep_link_##]="[##_paging_rep_link_##]">[ [##_paging_rep_link_num_##] ]</a>
                                 </s_paging_rep>
                             </span>
-                            <a [##_next_page_##]="[##_next_page_##]" class="[##_no_more_next_##]">
-                                ▶</a>
+                            <a [##_next_page_##]="[##_next_page_##]" class="[##_no_more_next_##]">[다음]</a>
                         </div>
                         <br><br>
                     </s_paging>

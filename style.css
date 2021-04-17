@@ -574,6 +574,10 @@ header #header-menu a {
 
 }
 
+#container #comment #commentList > ol > li > ul {
+    padding-left: 0;
+}
+
 #container #comment #commentList > ol > li > ul > li {
     list-style: none;
     padding-left: 0;
@@ -684,18 +688,20 @@ header #header-menu a {
 #paging a {
     text-decoration: none;
     font-size: large;
-    color: dodgerblue;
+    color: white;
 }
 
 #paging a:hover {
-    text-decoration: none;
-    color: hotpink; 
+    /* text-decoration: underline; */
+    font-size: larger;
+    /* color: hotpink;  */
 }
 
 #paging .selected {
-    color: hotpink;
-    text-decoration: none;
+    /* color: hotpink; */
+    /* text-decoration: underline; */
     font-weight: bold;
+    font-size: larger;
 }
 
 
@@ -747,7 +753,7 @@ footer a:hover {
 }
 
 .reply-linux a {
-    color:#8AE234;
+    color:#8AE234 !important; 
 }
 
 .reply-linux1 {
@@ -755,15 +761,31 @@ footer a:hover {
 }
 
 .reply-linux1 a {
-    color:blue;
+    color:blue !important;
 }
 
 .reply-linux2 {
-    color:hotpink;
+    color:#8AE234;
 }
 
 .reply-linux2 a {
-    color:hotpink;
+    color:#8AE234;
+}
+
+.address {
+    color: aqua !important;
+} 
+
+.write {
+    color: aqua !important;
+}
+
+.modify {
+    color: aqua !important;
+}
+
+.tistoryProfileLayerTrigger {
+    display: none !important;
 }
 
 @media (max-width:800px){
