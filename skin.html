@@ -281,8 +281,7 @@
                                                         type="text"
                                                         class="homepage"
                                                         name="[##_rp_input_homepage_##]"
-                                                        value="[##_guest_homepage_##]"
-                                                        placeholder="선택사항"/>
+                                                        value="[##_guest_homepage_##]"/>
 
                                                 </div>
                                             </s_rp_guest>
@@ -326,28 +325,34 @@
                                     <s_guest_member>
                                         <s_guest_form>
                                             <div>
+                                                <span class="reply-linux2">guest@이름</span> ~$ <br>
                                                 <input
+                                                    style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
                                                     type="text"
                                                     id="[##_guest_input_name_##]"
                                                     name="[##_guest_input_name_##]"
                                                     class="textfield"
                                                     value="[##_guest_name_##]"
                                                     maxlength="20"
-                                                    placeholder="이름"/>
+                                                    placeholder="필수"/>
                                                 <label for="[##_guest_input_name_##]"></label>
                                             </div>
                                             <div>
+                                                <span class="reply-linux2">guest@패스워드</span> ~$ <br>
                                                 <input
+                                                    style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
                                                     type="password"
                                                     id="[##_guest_input_password_##]"
                                                     class="textfield"
                                                     name="[##_guest_input_password_##]"
                                                     value="[##_guest_password_##]"
-                                                    placeholder="비밀번호"/>
+                                                    placeholder="필수"/>
                                                 <label for="[##_guest_input_password_##]"></label>
                                             </div>
                                             <div>
+                                                <span class="reply-linux2">guest@홈페이지주소작성</span> ~$ <br>
                                                 <input
+                                                    style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
                                                     type="text"
                                                     id="[##_guest_input_homepage_##]"
                                                     class="textfield"
@@ -366,18 +371,18 @@
                                             <label for="[##_guest_input_is_secret_##]">
                                                 <span class="secret">secret</span></label>
                                         </div>
+                                        <br>
                                     </s_guest_member>
                                     <div>
+                                        <span class="reply-linux2">guest@방명록작성</span> ~$ <br> 
                                         <textarea
-                                            name="[##_guest_textarea_body_##]"
-                                            class="textarea"
-                                            rows="10"
-                                            cols="40"></textarea>
+                                            style="margin-top: 10px; width: 100%; height:100px; border: none; background: white; color:black; outline: none;"
+                                            name="[##_guest_textarea_body_##]"></textarea>
                                     </div>
                                     <div><input
+                                        style="float:right; border: none; background: transparent; color:white; outline: none; font-size:medium;"
                                         type="submit"
-                                        class="submit_button"
-                                        value="방명록 쓰기"
+                                        value="[방명록 입력]"
                                         onclick="[##_guest_onclick_submit_##]"/></div>
                                 </s_guest_input_form>
                                 <div class="fixed"></div>
@@ -385,23 +390,21 @@
 
                             <div id="guest_list">
                                 <s_guest_container>
+                                    
                                     <ol>
                                         <s_guest_rep>
                                             <li id="[##_guest_rep_id_##]" class="hover">
                                                 <div class="[##_guest_rep_class_##]">
-                                                    <div class="comment_in sidebar_grid_logo">
-                                                        <div class="reply-logo" style="background-image:url('[##_guest_rep_logo_##]')"></div>
-                                                        <div>
-                                                            <span style="font-weight: bold; font-size: large;">[##_guest_rep_name_##]</span><br>
-                                                            <span style="font-size: x-small;">
-                                                                [##_guest_rep_date_##]</span><br>
-                                                            <span style="font-size: x-small;">
-                                                                <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify"><i class="far fa-edit" title="수정/삭제"></i></a>
-                                                                <a href="#" onclick="[##_guest_rep_onclick_reply_##]" class="write">&nbsp;<i class="fas fa-reply" title="답글쓰기"></i></a>
-                                                            </span>
-                                                        </div>
+                                                    <div>
+                                                        <span class="reply-linux">
+                                                            [##_guest_rep_name_##]@[##_guest_rep_date_##]
+                                                        </span>
+                                                        ~$ [##_guest_rep_desc_##]
+                                                        <span>
+                                                            <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify">[수정/삭제]</a>
+                                                            <a href="#" onclick="[##_guest_rep_onclick_reply_##]" class="write">&nbsp;[답글작성]</a>
+                                                        </span>
 
-                                                        <div style="text-align:right;">[##_guest_rep_desc_##]</div>
                                                     </div>
                                                 </div>
                                                 <s_guest_reply_container>
@@ -409,17 +412,15 @@
                                                         <s_guest_reply_rep>
                                                             <li id="[##_guest_rep_id_##]">
                                                                 <div class="[##_guest_rep_class_##]">
-                                                                    <div class="comment_in sidebar_grid_logo">
-                                                                        <div class="reply-logo" style="background-image:url('[##_guest_rep_logo_##]')"></div>
-                                                                        <div>
-                                                                            <span style="font-weight: bold; font-size: large;">[##_guest_rep_name_##]</span><br>
-                                                                            <span style="font-size: x-small;">
-                                                                                [##_guest_rep_date_##]</span><br>
-                                                                            <span style="font-size: x-small;">
-                                                                                <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify"><i class="far fa-edit" title="수정/삭제"></i></a>
-                                                                            </span>
-                                                                        </div>
-                                                                        <div style="text-align:right;">[##_guest_rep_desc_##]</div>
+                                                                    <div>
+                                                                        
+                                                                        <span class="reply-linux1">
+                                                                            [##_guest_rep_name_##]@[##_guest_rep_date_##]
+                                                                        </span>
+                                                                        ~$ <span style="color: hotpink;">[답글]:</span> [##_guest_rep_desc_##]
+                                                                        <span>
+                                                                            <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify">[수정/삭제]</a>
+                                                                        </span>
                                                                     </div>
                                                                 </div>
                                                             </li>

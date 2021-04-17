@@ -586,7 +586,9 @@ header #header-menu a {
     margin-top: 5px;
 }
 
-
+#container #guest {
+    text-align: justify;
+} 
 
 #container #guest a {
     color: lightgray;
@@ -597,9 +599,10 @@ header #header-menu a {
 }
 
 #container #guest #respond {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin: auto;
+    max-width: 800px;
     color: lightgray;
+    padding: 20px;
 }
 
 
@@ -622,10 +625,14 @@ header #header-menu a {
     padding-left: 0;
     list-style: none;
     margin: 0;
-    border-top: solid 1px #EAECEF;
+    /* border-top: solid 1px #EAECEF; */
     padding-top: 10px;
     padding-bottom: 10px;
 
+}
+
+#container #guest #guest_list > ol > li > ul {
+    padding-left: 0;
 }
 
 #container #guest #guest_list > ol > li > ul > li {
