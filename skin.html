@@ -262,7 +262,7 @@
                                                 <div>
                                                     <span class="reply-linux2">guest@이름</span> ~$ <br>
                                                     <input
-                                                        style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
+                                                        class="inputs"
                                                         type="text"
                                                         name="[##_rp_input_name_##]"
                                                         value="[##_guest_name_##]"
@@ -272,7 +272,7 @@
                                                 <div>
                                                     <span class="reply-linux2">guest@패스워드</span> ~$ <br>
                                                     <input
-                                                        style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
+                                                        class="inputs"
                                                         type="password"
                                                         maxlength="8"
                                                         name="[##_rp_input_password_##]"
@@ -283,7 +283,7 @@
                                                 <div>
                                                     <span class="reply-linux2">guest@홈페이지주소작성</span> ~$ <br>
                                                     <input
-                                                        style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
+                                                        class="inputs"
                                                         type="text"
                                                         class="homepage"
                                                         name="[##_rp_input_homepage_##]"
@@ -302,9 +302,10 @@
                                         </s_rp_member>
                                         <div>
                                             <span class="reply-linux2">guest@댓글작성</span> ~$ <br> 
-                                            <textarea style="margin-top: 10px; width: 100%; height:100px; border: none; background: white; color:black; outline: none;" name="[##_rp_input_comment_##]"></textarea> <br> 
+                                            <textarea 
+                                            class="inputs" style="height:100px;" name="[##_rp_input_comment_##]"></textarea> <br> 
                                             
-                                            <input style="float:right; border: none; background: transparent; color:white; outline: none; font-size:medium;" type="submit" value="[댓글 입력]" onclick="[##_rp_onclick_submit_##]"/>
+                                            <input class="submit_button" type="submit" value="[댓글 입력]" onclick="[##_rp_onclick_submit_##]"/>
                                             <br>
                                         </div> 
 
@@ -333,7 +334,7 @@
                                             <div>
                                                 <span class="reply-linux2">guest@이름</span> ~$ <br>
                                                 <input
-                                                    style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
+                                                    class="inputs"
                                                     type="text"
                                                     id="[##_guest_input_name_##]"
                                                     name="[##_guest_input_name_##]"
@@ -346,7 +347,7 @@
                                             <div>
                                                 <span class="reply-linux2">guest@패스워드</span> ~$ <br>
                                                 <input
-                                                    style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
+                                                    class="inputs"
                                                     type="password"
                                                     id="[##_guest_input_password_##]"
                                                     class="textfield"
@@ -358,7 +359,7 @@
                                             <div>
                                                 <span class="reply-linux2">guest@홈페이지주소작성</span> ~$ <br>
                                                 <input
-                                                    style="margin-top: 10px; width: 100%; border: none; background: white; color:black; outline: none;"
+                                                    class="inputs"
                                                     type="text"
                                                     id="[##_guest_input_homepage_##]"
                                                     class="textfield"
@@ -382,11 +383,12 @@
                                     <div>
                                         <span class="reply-linux2">guest@방명록작성</span> ~$ <br> 
                                         <textarea
-                                            style="margin-top: 10px; width: 100%; height:100px; border: none; background: white; color:black; outline: none;"
+                                            class="inputs"
+                                            style="height:100px;"
                                             name="[##_guest_textarea_body_##]"></textarea>
                                     </div>
                                     <div><input
-                                        style="float:right; border: none; background: transparent; color:white; outline: none; font-size:medium;"
+                                        class="submit_button"
                                         type="submit"
                                         value="[방명록 입력]"
                                         onclick="[##_guest_onclick_submit_##]"/></div>
@@ -827,40 +829,40 @@
 
             function modechange(){
                     localStorage["Mode"] = "lightmode";
-                    $("#article").css({"background-color":"white"});
+                    $("#container").css({"background-color":"white"});
                     $("#article").css({"color":"black"});
-                    $("#notice").css({"background-color":"white"});
                     $("#notice").css({"color":"black"});
-                    $("#protect").css({"background-color":"white"});
                     $("#protect").css({"color":"black"});
-                    // $("#comment a").css({"color":"black"});
-                    // $("#comment #commentWrite").css({"color":"black"});
-                    // $("#comment #commentList").css({"color":"black"});
-                    // $("#guest a").css({"color":"black"});
-                    // $("#guest #repond").css({"color":"black"});
-                    // $("#guest #guest_list").css({"color":"black"});
-                    // $("#category a ").css({"color":"black"});
+                    $("#paging a").css({"color":"black"});
+                    $("#comment a").css({"color":"black"});
+                    $("#comment #commentWrite").css({"color":"black"});
+                    $("#comment #commentList").css({"color":"black"});
+                    $("#guest a").css({"color":"black"});
+                    $("#guest #respond").css({"color":"black"});
+                    $("#guest #guest_list").css({"color":"black"});
+                    $("#category a ").css({"color":"black"});
                     $("#mode").css({"color":"yellow"});
                     $("#mode").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드' onclick=" + "'modechange1();'></i>");
+                    $(".submit_button").css({"color":"black"});
             };
 
             function modechange1(){
                     localStorage["Mode"] = "darkmode";
-                    $("#article").css({"background-color":"#141617"});
+                    $("#container").css({"background-color":"#141617"});
                     $("#article").css({"color":"lightgray"});
-                    $("#notice").css({"background-color":"#141617"});
                     $("#notice").css({"color":"lightgray"});
-                    $("#protect").css({"background-color":"#141617"});
                     $("#protect").css({"color":"lightgray"});
-                    // $("#comment a").css({"color":"lightgray"});
-                    // $("#comment #commentWrite").css({"color":"lightgray"});
-                    // $("#comment #commentList").css({"color":"lightgray"});
-                    // $("#guest a").css({"color":"lightgray"});
-                    // $("#guest #repond").css({"color":"lightgray"});
-                    // $("#guest #guest_list").css({"color":"lightgray"});
-                    // $("#category a ").css({"color":"lightgray"});
+                    $("#paging a").css({"color":"white"});
+                    $("#comment a").css({"color":"lightgray"});
+                    $("#comment #commentWrite").css({"color":"lightgray"});
+                    $("#comment #commentList").css({"color":"lightgray"});
+                    $("#guest a").css({"color":"lightgray"});
+                    $("#guest #respond").css({"color":"lightgray"});
+                    $("#guest #guest_list").css({"color":"lightgray"});
+                    $("#category a ").css({"color":"lightgray"});
                     $("#mode").css({"color":"white"});
                     $("#mode").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드' onclick=" + "'modechange();'></i>");
+                    $(".submit_button").css({"color":"white"});
             };
 
             function js_Load(){

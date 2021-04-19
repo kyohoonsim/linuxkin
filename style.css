@@ -40,6 +40,24 @@ html {
     color: white;
 }
 
+.inputs {
+    margin-top: 10px; 
+    width: 100%; 
+    background: white; 
+    color:black; 
+    outline: none;
+    border: dashed 1px black;
+}
+
+.submit_button {
+    float:right; 
+    border: none; 
+    background: transparent; 
+    color:white; 
+    outline: none; 
+    font-size:medium;
+}
+
 /* 쿠팡 다크모드 대비 */
 iframe {
 	background-color: white;
