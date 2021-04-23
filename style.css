@@ -614,6 +614,15 @@ header #header-menu a {
     margin-top: 5px;
 }
 
+#reply-note {
+    /* border-top: dashed 2px gray;  */
+    border-bottom: dashed 2px lightgray;
+    margin: auto;
+    max-width: 800px;
+    color: lightgray;
+    /* padding: 20px; */
+}
+
 #container #guest {
     text-align: justify;
 } 
