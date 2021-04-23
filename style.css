@@ -565,6 +565,9 @@ header #header-menu a {
 
 #container #comment {
     text-align: justify;
+    font-size: large;
+    line-height: 1.5;
+	font-family: 'NEXON Lv1 Gothic OTF'; 
 } 
 
 #container #comment a {
@@ -629,6 +632,9 @@ header #header-menu a {
 
 #container #guest {
     text-align: justify;
+    font-size: large; 
+    line-height: 1.5;
+	font-family: 'NEXON Lv1 Gothic OTF';
 } 
 
 #container #guest a {
