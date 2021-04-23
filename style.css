@@ -43,19 +43,21 @@ html {
 .inputs {
     margin-top: 10px; 
     width: 100%; 
-    background: white; 
-    color:black; 
+    background: transparent; 
+    color:lightgray; 
     outline: none;
-    border: dashed 1px black;
+    /* border: solid 1px lightgray; */
+    /* box-shadow: lightgrey 1px 1px 5px 1px; */
 }
 
 .submit_button {
     float:right; 
     border: none; 
-    background: transparent; 
+    background: dodgerblue; 
     color:white; 
-    outline: none; 
-    font-size:medium;
+    /* outline: none;  */
+    /* box-shadow: lightgrey 1px 1px 5px 1px; */
+    /* font-size:medium; */
 }
 
 /* 쿠팡 다크모드 대비 */
@@ -616,11 +618,13 @@ header #header-menu a {
 
 #reply-note {
     /* border-top: dashed 2px gray;  */
-    border-bottom: dashed 2px lightgray;
+    /* border-bottom: dashed 2px lightgray; */
     margin: auto;
     max-width: 800px;
     color: lightgray;
-    /* padding: 20px; */
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #container #guest {
@@ -793,39 +797,45 @@ footer a:hover {
 }
 
 .reply-linux {
-    color:#8AE234;
+    color:#4791CF;
+    font-weight: bold;
 }
 
 .reply-linux a {
-    color:#8AE234 !important; 
+    color:#4791CF !important; 
+    font-weight: bold;
 }
 
 .reply-linux1 {
-    color:blue;
+    color:#B86E30;
+    font-weight: bold;
 }
 
 .reply-linux1 a {
-    color:blue !important;
+    color:#B86E30 !important;
+    font-weight: bold;
 }
 
 .reply-linux2 {
-    color:#8AE234;
+    color:#4791CF;
+    font-weight: bold;
 }
 
 .reply-linux2 a {
-    color:#8AE234;
+    color:#4791CF;
+    font-weight: bold;
 }
 
 .address {
-    color: aqua !important;
+    color: #93C25C !important;
 } 
 
 .write {
-    color: aqua !important;
+    color: #93C25C !important;
 }
 
 .modify {
-    color: aqua !important;
+    color: #93C25C !important;
 }
 
 .tistoryProfileLayerTrigger {

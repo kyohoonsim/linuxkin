@@ -194,6 +194,7 @@
                                     <p> * 칭찬, 지적, 의문, 격려, 감사표현 등을 남겨주세요.</p>
                                     <p> * 최대한 답변 드리도록 노력하겠습니다.</p>
                                     <p> * 욕설과 광고를 담은 댓글은 가차없이 삭제합니다.</p>
+                                    <hr>
                                 </div>
 
                                 <s_rp_container>
@@ -231,7 +232,7 @@
                                                                         <span class="reply-linux1">
                                                                             [##_rp_rep_name_##]@[##_rp_rep_date_##]
                                                                         </span> 
-                                                                        ~$ <span style="color: hotpink;">[답글]:</span> [##_rp_rep_desc_##] 
+                                                                        ~$ <span style="color: #9CDCF0;">[답글]: </span> [##_rp_rep_desc_##]
                                                                         <span>
                                                                             <a href="[##_rp_rep_link_##]" class="address">
                                                                                 [댓글주소]
@@ -252,6 +253,7 @@
                                             </s_rp_rep>
                                         </ol>
                                     </div>
+                                    
                                 </s_rp_container>
 
                                 <s_rp_input_form>
@@ -306,7 +308,7 @@
                                             <textarea 
                                             class="inputs" style="height:100px;" name="[##_rp_input_comment_##]"></textarea> <br> 
                                             
-                                            <input class="submit_button" type="submit" value="[댓글 입력]" onclick="[##_rp_onclick_submit_##]"/>
+                                            <input class="submit_button" type="submit" value="댓글 입력" onclick="[##_rp_onclick_submit_##]"/>
                                             <br>
                                         </div> 
 
@@ -391,7 +393,7 @@
                                     <div><input
                                         class="submit_button"
                                         type="submit"
-                                        value="[방명록 입력]"
+                                        value="방명록 입력"
                                         onclick="[##_guest_onclick_submit_##]"/></div>
                                 </s_guest_input_form>
                                 <div class="fixed"></div>
@@ -426,7 +428,7 @@
                                                                         <span class="reply-linux1">
                                                                             [##_guest_rep_name_##]@[##_guest_rep_date_##]
                                                                         </span>
-                                                                        ~$ <span style="color: hotpink;">[답글]:</span> [##_guest_rep_desc_##]
+                                                                        ~$ <span style="color: #9CDCF0;">[답글]: </span> [##_guest_rep_desc_##]
                                                                         <span>
                                                                             <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify">[수정/삭제]</a>
                                                                         </span>
@@ -528,7 +530,7 @@
 
                     <!--푸터 시작-->
                     <footer>
-                        <a href="[##_blog_link_##]" style="color:#8AE234; margin-left:5px;">guest@[##_title_##]</a> ~$
+                        <a href="[##_blog_link_##]" style="color:#4791CF; margin-left:5px;">guest@[##_title_##]</a>  ~$
                     <s_search>
                         <span class="cursor">
                             <input
@@ -835,6 +837,7 @@
                     $("#notice").css({"color":"black"});
                     $("#protect").css({"color":"black"});
                     $("#paging a").css({"color":"black"});
+                    $("#reply-note").css({"color":"black"});
                     $("#comment a").css({"color":"black"});
                     $("#comment #commentWrite").css({"color":"black"});
                     $("#comment #commentList").css({"color":"black"});
@@ -844,7 +847,8 @@
                     $("#category a ").css({"color":"black"});
                     $("#mode").css({"color":"yellow"});
                     $("#mode").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드' onclick=" + "'modechange1();'></i>");
-                    $(".submit_button").css({"color":"black"});
+                    // $(".submit_button").css({"color":"black"});
+                    $(".inputs").css({"color": "black", "border": "solid 1px black"});
             };
 
             function modechange1(){
@@ -854,6 +858,7 @@
                     $("#notice").css({"color":"lightgray"});
                     $("#protect").css({"color":"lightgray"});
                     $("#paging a").css({"color":"white"});
+                    $("#reply-note").css({"color":"lightgray"});
                     $("#comment a").css({"color":"lightgray"});
                     $("#comment #commentWrite").css({"color":"lightgray"});
                     $("#comment #commentList").css({"color":"lightgray"});
@@ -863,7 +868,8 @@
                     $("#category a ").css({"color":"lightgray"});
                     $("#mode").css({"color":"white"});
                     $("#mode").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드' onclick=" + "'modechange();'></i>");
-                    $(".submit_button").css({"color":"white"});
+                    // $(".submit_button").css({"color":"white"});
+                    $(".inputs").css({"color": "lightgray", "border": "solid 1px lightgray"});
             };
 
             function js_Load(){
