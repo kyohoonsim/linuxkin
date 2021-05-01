@@ -55,6 +55,7 @@ html {
     border: none; 
     background: dodgerblue; 
     color:white; 
+    cursor: pointer;
     /* outline: none;  */
     /* box-shadow: lightgrey 1px 1px 5px 1px; */
     /* font-size:medium; */
