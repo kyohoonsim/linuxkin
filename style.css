@@ -102,9 +102,10 @@ a:hover {
 }
 
 /* 애드센스 자동광고 여백주기 */
-.ap_container {
+/* .ap_container {
     margin-top: 20px;
-}
+} */
+
 
 .ads {
     text-align:center;
