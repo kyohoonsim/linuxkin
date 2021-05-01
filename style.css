@@ -744,6 +744,7 @@ header #header-menu a {
     text-decoration: none;
     font-size: large;
     color: white;
+    cursor: pointer;
 }
 
 #paging a:hover {
