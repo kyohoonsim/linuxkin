@@ -1,8 +1,8 @@
-# linuxkin
-
-![리눅스킨](./preview.gif)
+# LinuXkin
 
 ## 개발자를 위한 티스토리 반응형 스킨, 리눅스킨(LinuXkin)입니다.
+
+![리눅스킨](./preview.gif)
 
 스킨을 디자인할 때 리눅스와 구름 IDE의 UI에서 영감을 얻었습니다.  
 
@@ -21,4 +21,6 @@
 * 리눅스킨이 적용된 예시 블로그: https://kyohoonsim1.tistory.com/
 
 
-저는 티스토리 스킨을 제작할 때 티스토리 스킨 가이드를 https://tistory.github.io/document-tistory-skin/ 를 참고했습니다.
+## 티스토리 스킨 제작에 도움이 되는 웹페이지
+
+* 티스토리 스킨 가이드: https://tistory.github.io/document-tistory-skin/
