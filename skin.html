@@ -137,13 +137,27 @@
                         <div class="main-title">
                             <span class="main-category"><a href="[##_article_rep_category_link_##]"><i class="fas fa-briefcase" style="color:dodgerblue;"></i> [##_article_rep_category_##]/</a></span>    
                             <a href="[##_article_rep_link_##]"><span>[##_article_rep_title_##]</span><span style="color:gray;">.txt</span></a>
-                                
+                            
+
+                            <s_ad_div>
+                                <span style="color:yellow;">
+                                <script>
+                                    if ('[##_s_ad_s1_label_##]' == '비공개') {
+                                        document.write('<i class="fas fa-eye-slash"></i>');
+                                    }
+                                    else if ('[##_s_ad_s1_label_##]' == '보호') {
+                                        document.write('<i class="fas fa-key"></i>')
+                                    }
+                                </script>
+                                </span>
+                            </s_ad_div>
                         </div>
 
                         
                         <div class="main-time">
                             [##_article_rep_date_year_##]-[##_article_rep_date_month_##]-[##_article_rep_date_day_##]
                             [##_article_rep_date_hour_##]:[##_article_rep_date_minute_##]:[##_article_rep_date_second_##]
+                            
                         </div>
 
                         <div id="article">
