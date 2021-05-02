@@ -62,9 +62,9 @@ html {
 }
 
 /* 쿠팡 다크모드 대비 */
-iframe {
+/* iframe {
 	background-color: white;
-}
+} */
 
 /* body::-webkit-scrollbar {
 	width: 20px;
