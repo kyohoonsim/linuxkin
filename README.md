@@ -9,6 +9,9 @@
 - 이 스킨을 다운받기 전에 우측 상단에 있는 별 하나만 눌러주세요. :D
 - 감사합니다. 
 
+## 사용기술
+- HTML, JavaScript, JQuery, CSS
+
 ## 티스토리 스킨 제작에 도움이 되는 웹페이지
 * 티스토리 스킨 가이드: https://tistory.github.io/document-tistory-skin/
 
