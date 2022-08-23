@@ -1,8 +1,6 @@
 /* 전체 CSS*/
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 
 @font-face {
@@ -41,25 +39,29 @@ html {
 }
 
 .inputs {
-    margin-top: 10px; 
+    display: block;
+    font-size: 16px;
+    /* margin-top: 10px;  */
     width: 100%; 
-    background: transparent; 
+    /* background: transparent; 
     color:lightgray; 
-    outline: none;
+    outline: none; */
     /* border: solid 1px lightgray; */
     /* box-shadow: lightgrey 1px 1px 5px 1px; */
 }
 
 .submit_button {
     float:right; 
-    border: none; 
-    background: dodgerblue; 
-    color:white; 
+    /* border: none;  */
+    /* background: dodgerblue;  */
+    /* color:white;  */
     cursor: pointer;
     /* outline: none;  */
     /* box-shadow: lightgrey 1px 1px 5px 1px; */
     /* font-size:medium; */
 }
+
+
 
 /* 쿠팡 다크모드 대비 */
 /* iframe {
@@ -465,18 +467,19 @@ header #header-menu a {
     margin-right: auto;
 }
 
-#container #article {
+#container .article {
     color: lightgray;
     padding: 20px;
     max-width: 800px;
     margin: auto;
 }
 
-#container #article img {
+
+#container .article img {
     background-color: white;
 }
 
-#container #article li {
+#container .article li {
     border-bottom: 1px solid #EAECEF;
 }
 
@@ -511,6 +514,16 @@ header #header-menu a {
 
 .main-title {
     background-color: #2F3336;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 5px;
+    text-align: justify;
+    font-size: large;
+    border-top: 2px solid dodgerblue;
+}
+
+.reply-main-title {
+    background-color: #2F3336; 
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 10px 5px;
@@ -565,42 +578,43 @@ header #header-menu a {
 }
 
 
-#container #comment {
+#container .comment {
     text-align: justify;
     font-size: large;
     line-height: 1.5;
 	font-family: 'NEXON Lv1 Gothic OTF'; 
 } 
 
-#container #comment a {
+#container .comment a {
     color: lightgray;
 }
 
-#container #comment a:hover {
+#container .comment a:hover {
     color: hotpink;
 }
 
-#container #comment #commentWrite {
+#container .comment .commentWrite {
     margin: auto;
     max-width: 800px;
     color: lightgray;
     padding: 20px;
 }
 
-#container #comment #commentList {
+#container .comment .commentList {
     color: lightgray;
     text-align: justify;
     max-width: 800px;
     margin: auto;
     padding: 20px;
+    font-size: 16px;
 }
 
-#container #comment #commentList > ol {
+#container .comment .commentList > ol {
     list-style: none;
     padding-left: 0;
 }
 
-#container #comment #commentList > ol > li {
+#container .comment .commentList > ol > li {
     list-style: none;
     padding-left: 0;
     /* border-top: solid 1px #EAECEF; */
@@ -609,11 +623,11 @@ header #header-menu a {
 
 }
 
-#container #comment #commentList > ol > li > ul {
-    padding-left: 0;
+#container .comment .commentList > ol > li > ul {
+    padding-left: 20px;
 }
 
-#container #comment #commentList > ol > li > ul > li {
+#container .comment .commentList > ol > li > ul > li {
     list-style: none;
     padding-left: 0;
     padding-top: 5px;
@@ -622,14 +636,46 @@ header #header-menu a {
 }
 
 #reply-note {
+    display: inline-block;
     /* border-top: dashed 2px gray;  */
     /* border-bottom: dashed 2px lightgray; */
-    margin: auto;
+    margin: 20px auto 0 auto;
     max-width: 800px;
-    color: lightgray;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* color: lightgray; */
+    padding: 20px;
+    background-color: lightgoldenrodyellow;
+    text-decoration: underline;
+    text-underline-position: under;
+    color: black;
+    text-align: justify;
+    
+}
+
+.postit {
+	border: 1px solid #0000004d;
+    padding: 20px;
+    font-size: 16px;
+	display: block;
+	position: relative;
+	cursor: pointer;
+    background-color: lightgoldenrodyellow;
+    color: black;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.postit:hover:before {
+	border-top: 15px solid #677e52;
+}
+
+.postit:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-top: 15px solid #7373734f;
+	border-left: 15px solid rgba(0, 0, 0, 0);
+	width: 0;
 }
 
 #container #guest {
@@ -661,6 +707,7 @@ header #header-menu a {
     margin: auto;
     padding: 20px;
     color: lightgray;
+    font-size: 16px;
 }
 
 #container #guest #guest_list > ol {
@@ -681,7 +728,7 @@ header #header-menu a {
 }
 
 #container #guest #guest_list > ol > li > ul {
-    padding-left: 0;
+    padding-left: 20px;
 }
 
 #container #guest #guest_list > ol > li > ul > li {
@@ -692,10 +739,10 @@ header #header-menu a {
 }
 
 
-.another_category { 
-    /*포스팅 본문 내에서 카테고리 내 다른 글 안보이게 하기. 깔끔하게 만들기 위해서.*/
-    /* display: none; */
-}
+/*포스팅 본문 내에서 카테고리 내 다른 글 안보이게 하기. 깔끔하게 만들기 위해서.*/
+/* .another_category {     
+    display: none;
+} */
 
 
 
@@ -720,9 +767,16 @@ header #header-menu a {
 }
 
 
+.tagTrail {
+    font-size: 16px;
+}
 
-#tagTrail a {
+.tagTrail a {
     text-decoration: none;
+}
+
+.tagTrail a:before {
+    content: '#';
 }
 
 #container #tags {

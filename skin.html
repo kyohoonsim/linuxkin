@@ -6,7 +6,9 @@
         <meta name="author" content="[##_blogger_##]">
         <meta name="description" content="[##_desc_##]">
         <meta name="generator" content="bskyvision">
-        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+        <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
 
         <title>[##_page_title_##] by [##_title_##]</title>
         <link rel="stylesheet" href="./style.css">
@@ -28,8 +30,12 @@
             var postNo = document.location.pathname;
         </script> 
 
+        <!--티스토리 코드블럭 테마 설정하기-->
+<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>-->
 
-
+        	
 
     </head>
     <body style="visibility: hidden;" onload="js_Load()">
@@ -62,6 +68,8 @@
                         <i class="fas fa-bars"></i>
                     </span> 
                 </span>
+
+                
             </header>
 
             <div id="container_and_sidebar">
@@ -89,7 +97,7 @@
 
                                                 
                                                     <s_list_rep_thumbnail>
-                                                        <img id="category_thumb" style="width:80px; height:50px; min-width:80px; min-height:50px;" src="https://img1.daumcdn.net/thumb/R200x0/?scode=mtistory2&fname=[##_list_rep_thumbnail_##]">
+                                                        <img id="category_thumb" style="width:80px; height:50px; min-width:80px; min-height:50px; object-fit: cover;" src="[##_list_rep_thumbnail_##]">
                                         
                                                     </s_list_rep_thumbnail>
                                                
@@ -97,7 +105,7 @@
                                                 <span style="font-weight:bolder;">
                                                     [##_list_rep_title_##]
                                                     
-                                                    <div style="color: gray; font-size:small;">
+                                                    <div style="color: gray; font-size:small; margin-top: 5px;">
                                                         [##_list_rep_regdate_##] <span style="color:hotpink;"> [##_list_rep_rp_cnt_##]</span>
                                                     </div>
                                                 </span>
@@ -116,7 +124,7 @@
                     <!-- 공지사항 페이지 시작 -->							
                     <s_notice_rep>
                         <div class="main-title">
-                            <span class ="main-category">공지사항/ </span><a href="[##_notice_rep_link_##]"> [##_notice_rep_title_##].txt</a>
+                            <span class ="main-category">공지사항/ </span><a href="[##_notice_rep_link_##]"> [##_notice_rep_title_##]</a>
                             
                         </div>
                         <div class="main-time">
@@ -136,7 +144,7 @@
 
                         <div class="main-title">
                             <span class="main-category"><a href="[##_article_rep_category_link_##]"><i class="fas fa-briefcase" style="color:dodgerblue;"></i> [##_article_rep_category_##]/</a></span>    
-                            <a href="[##_article_rep_link_##]"><span>[##_article_rep_title_##]</span><span style="color:gray;">.txt</span></a>
+                            <a href="[##_article_rep_link_##]"><span>[##_article_rep_title_##]</span></a>
                             
 
                             <s_ad_div>
@@ -160,16 +168,13 @@
                             
                         </div>
 
-                        <div id="article">
+                        <div class="article">
                         
                             <div class="main-contents">
 
                                 <!--광고-->
                                 <div class="ads">
                                     <!--광고 코드를 여기에 넣어주세요-->
-                                    
-
-
 
 
                                 </div>
@@ -180,7 +185,6 @@
                                 <div class='ads'>
                                     <!--광고 코드를 여기에 넣어주세요-->
 									
-                                    
 
 
 
@@ -188,7 +192,7 @@
                                 
 
                                 <s_tag_label>
-                                    <div id="tagTrail">
+                                    <div class="tagTrail">
                                         <span class="tags">태그 : [##_tag_label_rep_##]</span>
                                     </div>
                                 </s_tag_label>
@@ -196,24 +200,25 @@
                         </div>
 
                         <!--포스팅 댓글 영역 시작-->
-                        <div id="comment">
+                        <div class="comment">
                             <s_rp>
-                                <div class="main-title">
-                                    댓글
+                                <div class="reply-main-title">
+                                    <div>댓글</div>
                                 </div>
                                 
-                                <div id = "reply-note">
-                                    <p>방문해주신 모든 분들을 환영합니다.</p>
-                                    <p> * 글을 읽던 중에 궁금했던 부분은 질문해주세요.</p>
-                                    <p> * 칭찬, 지적, 의문, 격려, 감사표현 등을 남겨주세요.</p>
-                                    <p> * 최대한 답변 드리도록 노력하겠습니다.</p>
-                                    <p> * 욕설과 광고를 담은 댓글은 가차없이 삭제합니다.</p>
-                                    <hr>
+                                <div style="margin: 20px auto 0 auto; max-width: 800px; padding: 20px;">
+                                    <div class="postit">
+                                        * 글을 읽던 중에 궁금했던 부분은 질문해주세요.<br>
+                                        * 칭찬, 지적, 의문, 격려, 감사표현 등을 남겨주세요.<br>
+                                        * 최대한 답변 드리도록 노력하겠습니다.<br>
+                                        * 욕설과 광고를 담은 댓글은 가차없이 삭제합니다.<br>
+                                        <!--<hr>-->
+                                    </div>
                                 </div>
 
                                 <s_rp_container>
 
-                                    <div id="commentList">
+                                    <div class="commentList">
                                         
                                         <ol>
                                             <s_rp_rep>
@@ -272,57 +277,44 @@
 
                                 <s_rp_input_form>
                                     
-                                    <div id="commentWrite">
+                                    <div class="commentWrite">
                                         <s_rp_member>
                                             <s_rp_guest>
-                                                   
-                                                <div>
-                                                    <span class="reply-linux2">guest@이름</span> ~$ <br>
+                                                <div style="display:flex;">
                                                     <input
                                                         class="inputs"
                                                         type="text"
                                                         name="[##_rp_input_name_##]"
                                                         value="[##_guest_name_##]"
-                                                        placeholder="필수"/>
-
-                                                </div>
-                                                <div>
-                                                    <span class="reply-linux2">guest@패스워드</span> ~$ <br>
+                                                        autocomplete="off"
+                                                        placeholder="이름"/>
                                                     <input
                                                         class="inputs"
                                                         type="password"
                                                         maxlength="8"
                                                         name="[##_rp_input_password_##]"
                                                         value="[##_rp_admin_check_##]"
-                                                        placeholder="필수"/>
-
-                                                </div>
-                                                <div>
-                                                    <span class="reply-linux2">guest@홈페이지주소작성</span> ~$ <br>
+                                                        autocomplete="off"
+                                                        placeholder="비밀번호"/>
                                                     <input
                                                         class="inputs"
                                                         type="text"
-                                                        class="homepage"
                                                         name="[##_rp_input_homepage_##]"
-                                                        value="[##_guest_homepage_##]"/>
-
+                                                        value="[##_guest_homepage_##]"
+                                                        autocomplete="off"
+                                                        placeholder="홈페이지"/>
                                                 </div>
+
+             
                                             </s_rp_guest>
-                                            <div>
-                                                <input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox"/>
-                                                <label for="secret">
-                                                    secret
-                                                </label>
-                                                
-                                            </div>
-                                            <br>
+                                            
                                         </s_rp_member>
                                         <div>
-                                            <span class="reply-linux2">guest@댓글작성</span> ~$ <br> 
-                                            <textarea 
-                                            class="inputs" style="height:100px;" name="[##_rp_input_comment_##]"></textarea> <br> 
-                                            
-                                            <input class="submit_button" type="submit" value="댓글 입력" onclick="[##_rp_onclick_submit_##]"/>
+                                            <div style="display: flex; flex-direction: column;">
+                                                <textarea name="[##_rp_input_comment_##]" style="font-size: 16px;" rows="10" cols="30" placeholder="댓글을 작성해주세요."></textarea>
+                                                <input class="submit-btn" type="submit" value="제출" onclick="[##_rp_onclick_submit_##]"/>
+                                            </div>
+                                            <input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox" id="secret"/> <span style="font-size:14px;">비밀글</span>
                                             <br>
                                         </div> 
 
@@ -348,67 +340,43 @@
                                 <s_guest_input_form>
                                     <s_guest_member>
                                         <s_guest_form>
-                                            <div>
-                                                <span class="reply-linux2">guest@이름</span> ~$ <br>
-                                                <input
-                                                    class="inputs"
-                                                    type="text"
-                                                    id="[##_guest_input_name_##]"
-                                                    name="[##_guest_input_name_##]"
-                                                    class="textfield"
-                                                    value="[##_guest_name_##]"
-                                                    maxlength="20"
-                                                    placeholder="필수"/>
-                                                <label for="[##_guest_input_name_##]"></label>
-                                            </div>
-                                            <div>
-                                                <span class="reply-linux2">guest@패스워드</span> ~$ <br>
-                                                <input
-                                                    class="inputs"
-                                                    type="password"
-                                                    id="[##_guest_input_password_##]"
-                                                    class="textfield"
-                                                    name="[##_guest_input_password_##]"
-                                                    value="[##_guest_password_##]"
-                                                    placeholder="필수"/>
-                                                <label for="[##_guest_input_password_##]"></label>
-                                            </div>
-                                            <div>
-                                                <span class="reply-linux2">guest@홈페이지주소작성</span> ~$ <br>
-                                                <input
-                                                    class="inputs"
-                                                    type="text"
-                                                    id="[##_guest_input_homepage_##]"
-                                                    class="textfield"
-                                                    name="[##_guest_input_homepage_##]"
-                                                    value="[##_guest_homepage_##]"/>
-                                                <label for="[##_guest_input_homepage_##]"></label>
-                                            </div>
+                                                <div style="display:flex;">
+                                                    <input
+                                                        class="inputs"
+                                                        type="text"
+                                                        name="[##_guest_input_name_##]"
+                                                        value="[##_guest_name_##]"
+                                                        autocomplete="off"
+                                                        placeholder="이름"/>
+                                                    <input
+                                                        class="inputs"
+                                                        type="password"
+                                                        maxlength="8"
+                                                        name="[##_guest_input_password_##]"
+                                                        value="[##_guest_password_##]"
+                                                        autocomplete="off"
+                                                        placeholder="비밀번호"/>
+                                                    <input
+                                                        class="inputs"
+                                                        type="text"
+                                                        name="[##_guest_input_homepage_##]"
+                                                        value="[##_guest_homepage_##]"
+                                                        autocomplete="off"
+                                                        placeholder="홈페이지"/>
+                                                </div>
+
                                         </s_guest_form>
-                                        <div>
-                                            <input
-                                                type="checkbox"
-                                                id="[##_guest_input_is_secret_##]"
-                                                name="[##_guest_input_is_secret_##]"
-                                                class="checkbox"
-                                                value="1"/>
-                                            <label for="[##_guest_input_is_secret_##]">
-                                                <span class="secret">secret</span></label>
-                                        </div>
-                                        <br>
                                     </s_guest_member>
-                                    <div>
-                                        <span class="reply-linux2">guest@방명록작성</span> ~$ <br> 
-                                        <textarea
-                                            class="inputs"
-                                            style="height:100px;"
-                                            name="[##_guest_textarea_body_##]"></textarea>
-                                    </div>
-                                    <div><input
-                                        class="submit_button"
-                                        type="submit"
-                                        value="방명록 입력"
-                                        onclick="[##_guest_onclick_submit_##]"/></div>
+                                        <div>
+                                        <div style="display: flex; flex-direction: column;">
+                                                <textarea style="font-size: 16px;" name="[##_guest_textarea_body_##]" rows="10" cols="30" placeholder="방명록을 작성해주세요."></textarea>
+                                                <input class="submit-btn" type="submit" value="제출" onclick="[##_guest_onclick_submit_##]"/>
+                                            </div>
+                                            <input type="checkbox" name="[##_guest_input_is_secret_##]" class="checkbox" id="secret"/> <span style="font-size:14px;">비밀글</span>
+                                            <br>
+                                        </div>
+
+                                    
                                 </s_guest_input_form>
                                 <div class="fixed"></div>
                             </div>
@@ -488,7 +456,7 @@
                     <!-- 보호글 시작 -->
                     <s_article_protected>
                         <div class="main-title">
-                            <a href="[##_article_rep_link_##]">[##_article_rep_title_##].txt</a>
+                            <a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
                             <a class="main-category" href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a>
                         </div>
 
@@ -574,11 +542,7 @@
                                 <div class="sidebar-body sidebar_ads">
                                     <!--광고 코드를 여기에 넣어주세요-->
                                     
-
-
-
-                                    
-                                    
+                      
                                 </div>
                             </div>
 
@@ -655,8 +619,6 @@
                                 <div class="sidebar-body sidebar_ads">
                                     <!--광고 코드를 여기에 넣어주세요-->
                                     
-
-
                                     
                                 </div>
                             </div>
@@ -847,14 +809,14 @@
             function modechange(){
                     localStorage["Mode"] = "lightmode";
                     $("#container").css({"background-color":"white"});
-                    $("#article").css({"color":"black"});
+                    $(".article").css({"color":"black"});
                     $("#notice").css({"color":"black"});
                     $("#protect").css({"color":"black"});
                     $("#paging a").css({"color":"black"});
-                    $("#reply-note").css({"color":"black"});
-                    $("#comment a").css({"color":"black"});
-                    $("#comment #commentWrite").css({"color":"black"});
-                    $("#comment #commentList").css({"color":"black"});
+                    // $("#reply-note").css({"color":"black"});
+                    $(".comment a").css({"color":"black"});
+                    $(".comment .commentWrite").css({"color":"black"});
+                    $(".comment .commentList").css({"color":"black"});
                     $("#guest a").css({"color":"black"});
                     $("#guest #respond").css({"color":"black"});
                     $("#guest #guest_list").css({"color":"black"});
@@ -862,20 +824,20 @@
                     $("#mode").css({"color":"yellow"});
                     $("#mode").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드' onclick=" + "'modechange1();'></i>");
                     // $(".submit_button").css({"color":"black"});
-                    $(".inputs").css({"color": "black", "border": "solid 1px black"});
+                    // $(".inputs").css({"color": "black", "border": "solid 1px black"});
             };
 
             function modechange1(){
                     localStorage["Mode"] = "darkmode";
                     $("#container").css({"background-color":"#141617"});
-                    $("#article").css({"color":"lightgray"});
+                    $(".article").css({"color":"lightgray"});
                     $("#notice").css({"color":"lightgray"});
                     $("#protect").css({"color":"lightgray"});
                     $("#paging a").css({"color":"white"});
-                    $("#reply-note").css({"color":"lightgray"});
-                    $("#comment a").css({"color":"lightgray"});
-                    $("#comment #commentWrite").css({"color":"lightgray"});
-                    $("#comment #commentList").css({"color":"lightgray"});
+                    // $("#reply-note").css({"color":"lightgray"});
+                    $(".comment a").css({"color":"lightgray"});
+                    $(".comment .commentWrite").css({"color":"lightgray"});
+                    $(".comment .commentList").css({"color":"lightgray"});
                     $("#guest a").css({"color":"lightgray"});
                     $("#guest #respond").css({"color":"lightgray"});
                     $("#guest #guest_list").css({"color":"lightgray"});
@@ -883,7 +845,7 @@
                     $("#mode").css({"color":"white"});
                     $("#mode").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드' onclick=" + "'modechange();'></i>");
                     // $(".submit_button").css({"color":"white"});
-                    $(".inputs").css({"color": "lightgray", "border": "solid 1px lightgray"});
+                    // $(".inputs").css({"color": "lightgray", "border": "solid 1px lightgray"});
             };
 
             function js_Load(){
@@ -891,8 +853,6 @@
             }
 
         </script>
-
-
 
 
     </body>
