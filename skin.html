@@ -33,12 +33,6 @@
             var postNo = document.location.pathname;
         </script> 
 
-        <!--티스토리 코드블럭 테마 설정하기-->
-<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>-->
-
-        	
 
     </head>
     <body style="visibility: hidden;" onload="js_Load()">
@@ -85,11 +79,7 @@
                             <i class="fas fa-briefcase" style="color:dodgerblue;"></i> [##_list_conform_##] <span style="color:hotpink;">([##_list_count_##])</span>
                         </div>
 
-                        
-
-
-
-                        
+                                        
                         <div id="category">
 
                             <div id="category_in_list">
@@ -178,8 +168,7 @@
                                 <!--광고-->
                                 <div class="ads">
                                     <!--광고 코드를 여기에 넣어주세요-->
-
-
+                                    
                                 </div>
 
                                 [##_article_rep_desc_##]
@@ -188,9 +177,6 @@
                                 <div class='ads'>
                                     <!--광고 코드를 여기에 넣어주세요-->
 									
-
-
-
                                 </div>
                                 
 
@@ -205,19 +191,70 @@
                         <!--포스팅 댓글 영역 시작-->
                         <div class="comment">
                             <s_rp>
-                                <!-- <div class="reply-main-title">
-                                    <div>댓글</div>
-                                </div> -->
                                 
-                                <div style="margin: 0px auto 0 auto; max-width: 800px; padding: 20px;">
+                                <div style="margin: 0 auto 0 auto; max-width: 800px; padding: 20px;">
                                     <div class="postit">
                                         * 글을 읽던 중에 궁금했던 부분은 질문해주세요.<br>
                                         * 칭찬, 지적, 의문, 격려, 감사표현 등을 남겨주세요.<br>
                                         * 최대한 답변 드리도록 노력하겠습니다.<br>
                                         * 욕설과 광고를 담은 댓글은 가차없이 삭제합니다.<br>
                                         <!-- * 티스토리 회원인데, 로그인이 풀린 경우에는 우측 상단에 있는 물음표 아이콘을 클릭해주세요. <br> -->
-                                        <!--<hr>-->
                                     </div>
+                                    <button class="submit-btn" onclick="open_rp_input_div()">
+                                        <i class="fas fa-pen"></i> 댓글 남기기
+                                    </button>
+                                    
+                                </div>
+
+                                <div class="rp_input_form">
+                                <s_rp_input_form>
+                                    
+                                    <div class="commentWrite">
+                                        <s_rp_member>
+                                            <s_rp_guest>
+                                                <div>
+                                                    <input
+                                                        class="inputs"
+                                                        type="text"
+                                                        name="[##_rp_input_name_##]"
+                                                        value="[##_guest_name_##]"
+                                                        autocomplete="off"
+                                                        placeholder="이름"/>
+                                                    <input
+                                                        class="inputs"
+                                                        type="password"
+                                                        maxlength="8"
+                                                        name="[##_rp_input_password_##]"
+                                                        value="[##_rp_admin_check_##]"
+                                                        autocomplete="off"
+                                                        placeholder="비밀번호"/>
+                                                    <input
+                                                        class="inputs"
+                                                        type="text"
+                                                        name="[##_rp_input_homepage_##]"
+                                                        value="[##_guest_homepage_##]"
+                                                        autocomplete="off"
+                                                        placeholder="홈페이지"/>
+                                                </div>
+
+             
+                                            </s_rp_guest>
+                                            
+                                        </s_rp_member>
+                                        <div>
+                                            <div>
+                                                <textarea name="[##_rp_input_comment_##]" class="inputs" rows="10" placeholder="댓글을 작성해주세요."></textarea>
+                                                <input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox" id="secret"/> <span style="color: black; font-size: 14px;">비밀글</span>
+                                                <input class="submit-btn" type="submit" value="제출" onclick="[##_rp_onclick_submit_##]"/>
+                                                <button class="submit-btn" onclick="close_reply()">닫기</button>
+                                            </div>
+                                            
+                                        </div> 
+
+                                        
+                                    </div>
+                                    
+                                </s_rp_input_form>
                                 </div>
 
                                 <s_rp_container>
@@ -279,52 +316,9 @@
                                     
                                 </s_rp_container>
 
-                                <s_rp_input_form>
-                                    
-                                    <div class="commentWrite">
-                                        <s_rp_member>
-                                            <s_rp_guest>
-                                                <div style="display:flex;">
-                                                    <input
-                                                        class="inputs"
-                                                        type="text"
-                                                        name="[##_rp_input_name_##]"
-                                                        value="[##_guest_name_##]"
-                                                        autocomplete="off"
-                                                        placeholder="이름"/>
-                                                    <input
-                                                        class="inputs"
-                                                        type="password"
-                                                        maxlength="8"
-                                                        name="[##_rp_input_password_##]"
-                                                        value="[##_rp_admin_check_##]"
-                                                        autocomplete="off"
-                                                        placeholder="비밀번호"/>
-                                                    <input
-                                                        class="inputs"
-                                                        type="text"
-                                                        name="[##_rp_input_homepage_##]"
-                                                        value="[##_guest_homepage_##]"
-                                                        autocomplete="off"
-                                                        placeholder="홈페이지"/>
-                                                </div>
+                                
 
-             
-                                            </s_rp_guest>
-                                            
-                                        </s_rp_member>
-                                        <div>
-                                            <div style="display: flex; flex-direction: column;">
-                                                <textarea name="[##_rp_input_comment_##]" style="font-size: 16px;" rows="10" cols="30" placeholder="댓글을 작성해주세요."></textarea>
-                                                <input class="submit-btn" type="submit" value="제출" onclick="[##_rp_onclick_submit_##]"/>
-                                            </div>
-                                            <input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox" id="secret"/> <span style="font-size:14px;">비밀글</span>
-                                            <br>
-                                        </div> 
-
-                                        
-                                    </div>
-                                </s_rp_input_form>
+                                
                             </s_rp>
                         </div>
                         <!--포스팅 댓글 영역 끝-->
@@ -340,11 +334,19 @@
                             <div class="main-title">
                                 방명록
                              </div>
-                            <div id="respond">
+
+                            <div style="margin: 0 auto 0 auto; max-width: 800px; padding: 20px;">
+                             <button class="submit-btn" onclick="open_guest_input_div()">
+                                        <i class="fas fa-pen"></i> 방명록 남기기
+                              </button>
+                            </div>            
+
+                            <div class="guest_input_form">
                                 <s_guest_input_form>
+                                <div class="commentWrite">
                                     <s_guest_member>
                                         <s_guest_form>
-                                                <div style="display:flex;">
+                                                <div>
                                                     <input
                                                         class="inputs"
                                                         type="text"
@@ -371,19 +373,18 @@
 
                                         </s_guest_form>
                                     </s_guest_member>
-                                        <div>
-                                        <div style="display: flex; flex-direction: column;">
-                                                <textarea style="font-size: 16px;" name="[##_guest_textarea_body_##]" rows="10" cols="30" placeholder="방명록을 작성해주세요."></textarea>
-                                                <input class="submit-btn" type="submit" value="제출" onclick="[##_guest_onclick_submit_##]"/>
-                                            </div>
-                                            <input type="checkbox" name="[##_guest_input_is_secret_##]" class="checkbox" id="secret"/> <span style="font-size:14px;">비밀글</span>
-                                            <br>
-                                        </div>
-
                                     
+                                        
+                                    <div>
+                                        <textarea class="inputs" name="[##_guest_textarea_body_##]" rows="10" placeholder="방명록을 작성해주세요."></textarea>
+                                        <input type="checkbox" name="[##_guest_input_is_secret_##]" class="checkbox" id="secret"/> <span style="font-size:14px; color: black;">비밀글</span>
+                                        <input class="submit-btn" type="submit" value="제출" onclick="[##_guest_onclick_submit_##]"/>
+                                        <button class="submit-btn" onclick="close_guest()">닫기</button>
+                                    </div>
+                                </div>                                                            
                                 </s_guest_input_form>
-                                <div class="fixed"></div>
                             </div>
+                            
 
                             <div id="guest_list">
                                 <s_guest_container>
@@ -511,7 +512,7 @@
 
                     <!-- 카피라이터 부분입니다. 절대 수정하시면 안됩니다! -->
                     <div id="copy">
-                         ⓒ <a href="[##_blog_link_##]">[##_title_##]</a>. Designed by <a href="https://bskyvision.com/" title="스킨개발자">bskyvision.</a>    
+                         ⓒ <a href="[##_blog_link_##]">[##_title_##]</a>. Designed by <a href="https://bskyvision.com/" title="스킨개발자">코딩재개발.</a>    
                     </div>
 
                     <!--푸터 시작-->
@@ -535,8 +536,6 @@
 
                 <!--사이드바 시작-->
                 <div id="sidebar" class="sidenav">
-                    
-
                     <s_sidebar>
 
                         <s_sidebar_element>
@@ -544,9 +543,8 @@
                             <div class="sidebar_element">
                                 <div class="sidebar-title">ads</div>
                                 <div class="sidebar-body sidebar_ads">
-                                    <!--광고 코드를 여기에 넣어주세요-->
+                                    <!--광고 코드를 여기에 넣어주세요-->                   
                                     
-                      
                                 </div>
                             </div>
 
@@ -623,12 +621,10 @@
                                 <div class="sidebar-body sidebar_ads">
                                     <!--광고 코드를 여기에 넣어주세요-->
                                     
-                                    
                                 </div>
                             </div>
 
                         </s_sidebar_element>
-
 
                         <s_sidebar_element>
                             <!--최근댓글-->
@@ -817,9 +813,7 @@
                     $("#notice").css({"color":"black"});
                     $("#protect").css({"color":"black"});
                     $("#paging a").css({"color":"black"});
-                    // $("#reply-note").css({"color":"black"});
                     $(".comment a").css({"color":"black"});
-                    $(".comment .commentWrite").css({"color":"black"});
                     $(".comment .commentList").css({"color":"black"});
                     $("#guest a").css({"color":"black"});
                     $("#guest #respond").css({"color":"black"});
@@ -827,8 +821,7 @@
                     $("#category a ").css({"color":"black"});
                     $("#mode").css({"color":"yellow"});
                     $("#mode").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드' onclick=" + "'modechange1();'></i>");
-                    // $(".submit_button").css({"color":"black"});
-                    // $(".inputs").css({"color": "black", "border": "solid 1px black"});
+
             };
 
             function modechange1(){
@@ -838,9 +831,7 @@
                     $("#notice").css({"color":"lightgray"});
                     $("#protect").css({"color":"lightgray"});
                     $("#paging a").css({"color":"white"});
-                    // $("#reply-note").css({"color":"lightgray"});
                     $(".comment a").css({"color":"lightgray"});
-                    $(".comment .commentWrite").css({"color":"lightgray"});
                     $(".comment .commentList").css({"color":"lightgray"});
                     $("#guest a").css({"color":"lightgray"});
                     $("#guest #respond").css({"color":"lightgray"});
@@ -848,12 +839,27 @@
                     $("#category a ").css({"color":"lightgray"});
                     $("#mode").css({"color":"white"});
                     $("#mode").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드' onclick=" + "'modechange();'></i>");
-                    // $(".submit_button").css({"color":"white"});
-                    // $(".inputs").css({"color": "lightgray", "border": "solid 1px lightgray"});
+
             };
 
             function js_Load(){
                 document.body.style.visibility='visible';
+            }
+
+            function open_rp_input_div(){
+                $(".rp_input_form").css('display', 'block');
+            }
+
+            function close_reply(){
+                $(".rp_input_form").css('display', 'none');
+            }
+
+            function open_guest_input_div(){
+                $(".guest_input_form").css('display', 'block');
+            }
+
+            function close_guest(){
+                $(".guest_input_form").css('display', 'none');
             }
 
         </script>
