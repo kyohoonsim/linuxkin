@@ -1,14 +1,5 @@
 /* 전체 CSS*/
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
-
-@font-face {
-    font-family: 'RIDIBatang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'NEXON Lv1 Gothic OTF';
@@ -158,16 +149,13 @@ a:hover {
 header {
     display:flex; 
     align-items: center;
-    
     justify-content: space-between;
-
     height: 50px;
     width: 100%;
     position: fixed;
     left: 0;
     top: 0;
     font-size: large;
-    
     background-color: #2F3336;
     z-index: 5;
     border-top: 2px solid black;
@@ -411,7 +399,6 @@ header #header-menu a {
     color: aqua;
 }
 
-
 /* 콘테이너 CSS */
 #container {
     width: 100%;
@@ -433,9 +420,9 @@ header #header-menu a {
     background-color: white;
 }
 
-#container .article li {
+/* #container .article li {
     border-bottom: 1px solid #EAECEF;
-}
+} */
 
 #container #notice {
     color: lightgray;
@@ -671,7 +658,6 @@ header #header-menu a {
     padding-left: 0;
     list-style: none;
     margin: 0;
-    /* border-top: solid 1px #EAECEF; */
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -688,13 +674,10 @@ header #header-menu a {
     margin-top: 5px;
 }
 
-
 /*포스팅 본문 내에서 카테고리 내 다른 글 안보이게 하기. 깔끔하게 만들기 위해서.*/
 /* .another_category {     
     display: none;
 } */
-
-
 
 #container #category a {
     color: lightgray;
@@ -703,7 +686,6 @@ header #header-menu a {
 #container #category a:hover {
     color: hotpink;
 }
-
 
 #container #category #category_in_list > ul {
     list-style: none;
@@ -739,11 +721,11 @@ header #header-menu a {
 #container #tags > ul {
     padding-left: 0;
 }
+
 #container #tags > ul > li {
     list-style: none;
     display: inline;
 }
-
 
 #paging a {
     text-decoration: none;
@@ -760,7 +742,6 @@ header #header-menu a {
     font-weight: bold;
     font-size: larger;
 }
-
 
 #copy {
     display: inline;
@@ -788,7 +769,6 @@ footer {
     background-color: #2F3336;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-
     display:flex; 
     align-items: center;
     z-index: 5;
@@ -863,13 +843,9 @@ footer a:hover {
 }
 
 @media (max-width:1200px){
-
-
     #container_and_sidebar {
         display: block;
         margin-top: 50px;
-        /* margin-bottom: 40px; */
-    
     }
 
     #sidebar {
@@ -877,13 +853,11 @@ footer a:hover {
         width: 100%;
         position: static;
         overflow: hidden;
-
     }
 
     #sidebar-mobile {
         display: none;    
     }
-
 
     #header-menu {
         display: none;
