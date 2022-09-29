@@ -115,8 +115,30 @@ a:hover {
     display: none;
 }
 
+.blogImage {
+    text-align: center;
+    margin: 0 auto 20px auto;
+    position: relative;
+    width: 200px;
+}
+
 .blogImage img {
-    width: 80%;
+    width: 200px;
+    border-radius: 100%;
+    border: 1px solid gray;
+}
+
+#mark {
+    width: 30px;
+    height: 30px;
+    position: absolute; 
+    top: 150px; 
+    left: 160px; 
+    font-size: 20px;
+    padding: 10px;
+    background-color: #212426;
+    border-radius: 100%;
+    border: 1px solid gray;
 }
 
 .nav-up {
@@ -725,7 +747,6 @@ header #header-menu a {
 #container #tags > ul > li {
     list-style: none;
     display: inline-block;
-    margin:20px;
 }
 
 #paging a {
