@@ -442,9 +442,10 @@ header #header-menu a {
     background-color: white;
 }
 
-/* #container .article li {
-    border-bottom: 1px solid #EAECEF;
-} */
+#container .article h2, h3, h4, h5, h6 {
+    border-bottom: 2px solid dodgerblue;
+    padding-bottom: 10px;
+}
 
 #container #notice {
     color: lightgray;
@@ -518,17 +519,14 @@ header #header-menu a {
 }
 
 .main-time {
-    
-    display: inline;
-    float: right;
-    right: 0;
-    top: 0;
+    display: inline-block;
     background-color: red;
     color: white;
     padding: 5px 10px;
 }
 
 .main-contents {
+    display: relative;
     text-align: justify;
 	font-size: large; 
     line-height: 1.5;
@@ -618,30 +616,33 @@ header #header-menu a {
 }
 
 .postit {
-	border: 1px solid #0000004d;
-    padding: 20px;
+	border: 1px solid gray;
     font-size: 16px;
 	display: block;
 	position: relative;
 	cursor: pointer;
-    background-color: lightgoldenrodyellow;
+    background-color: #f6e214;
     color: black;
-    text-decoration: underline;
-    text-underline-position: under;
+    padding-top: 15px;
 }
 
-.postit:hover:before {
-	border-top: 15px solid #677e52;
+.postit div {
+    padding: 5px;
+    border-bottom: 1px solid gray;
 }
 
-.postit:before {
+.postit:hover::before {
+	border-bottom: 15px solid dodgerblue;
+}
+
+.postit::before {
 	content: '';
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	right: 0;
-	border-top: 15px solid #7373734f;
+    width: 0;
+	border-bottom: 15px solid gray;
 	border-left: 15px solid rgba(0, 0, 0, 0);
-	width: 0;
 }
 
 #container #guest {
@@ -723,6 +724,8 @@ header #header-menu a {
 
 .tagTrail {
     font-size: 16px;
+    text-align:right;
+    color: dodgerblue;
 }
 
 .tagTrail a {

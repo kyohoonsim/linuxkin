@@ -30,7 +30,6 @@
             var postNo = document.location.pathname;
         </script> 
 
-
     </head>
     <body style="visibility: hidden;" onload="js_Load()">
         <s_t3>
@@ -49,9 +48,9 @@
                 </span>
 
                 <span>
-                    <!-- <span id="convert" style="font-size: x-large;">
+                    <span id="convert" style="font-size: x-large;">
                         <a href="#"  onclick="location.href='https://blueskyvision.tistory.com'+postNo; return false;"><i class="far fa-question-circle" title="티스토리 회원분들은 댓글/방명록/구독신청을 하기 전에 이 버튼을 클릭해주세요."></i></a>
-                    </span> -->
+                    </span>
 
                     <span id="mode" style="margin-right:5px; font-size: x-large;"><i id="bulb" class="far fa-lightbulb" title="라이트모드" onclick="modechange();"></i></span>
 
@@ -151,21 +150,30 @@
                             </s_ad_div>
                         </div>
 
-                        
-                        <div class="main-time">
-                            [##_article_rep_date_year_##]-[##_article_rep_date_month_##]-[##_article_rep_date_day_##]
-                            [##_article_rep_date_hour_##]:[##_article_rep_date_minute_##]:[##_article_rep_date_second_##]
-                            
+                        <div style="text-align:right;">
+                            <div class="main-time">
+                                
+                                [##_article_rep_date_year_##]-[##_article_rep_date_month_##]-[##_article_rep_date_day_##]
+                                [##_article_rep_date_hour_##]:[##_article_rep_date_minute_##]:[##_article_rep_date_second_##]
+                                
+                            </div>
                         </div>
+                        
 
                         <div class="article">
                         
                             <div class="main-contents">
 
+                                <s_tag_label>
+                                    <div class="tagTrail">
+                                        <span class="tags">[##_tag_label_rep_##]</span>
+                                    </div>
+                                </s_tag_label>
+
                                 <!--광고-->
                                 <div class="ads">
                                     <!--광고 코드를 여기에 넣어주세요-->
-                                    
+
                                 </div>
 
                                 [##_article_rep_desc_##]
@@ -177,30 +185,25 @@
                                 </div>
                                 
 
-                                <s_tag_label>
-                                    <div class="tagTrail">
-                                        <span class="tags">태그 : [##_tag_label_rep_##]</span>
-                                    </div>
-                                </s_tag_label>
+                                
                             </div>
                         </div>
 
                         <!--포스팅 댓글 영역 시작-->
                         <div class="comment">
                             <s_rp>
-                                
                                 <div style="margin: 0 auto 0 auto; max-width: 800px; padding: 20px;">
-                                    <div class="postit">
-                                        * 글을 읽던 중에 궁금했던 부분은 질문해주세요.<br>
-                                        * 칭찬, 지적, 의문, 격려, 감사표현 등을 남겨주세요.<br>
-                                        * 최대한 답변 드리도록 노력하겠습니다.<br>
-                                        * 욕설과 광고를 담은 댓글은 가차없이 삭제합니다.<br>
-                                        <!-- * 티스토리 회원인데, 로그인이 풀린 경우에는 우측 상단에 있는 물음표 아이콘을 클릭해주세요. <br> -->
-                                    </div>
-                                    <button class="submit-btn" onclick="open_rp_input_div()">
-                                        <i class="fas fa-pen"></i> 댓글 남기기
-                                    </button>
                                     
+                                    <div class="postit">
+                                        <div>글을 읽던 중에 궁금했던 부분은 질문해주세요.</div>
+                                        <div>칭찬, 지적, 의문, 격려, 감사표현 등을 남겨주세요.</div>
+                                        <div>최대한 답변 드리도록 노력하겠습니다.</div>
+                                        <div>욕설과 광고를 담은 댓글은 가차없이 삭제합니다.</div>
+                                    </div>
+
+                                    <button onclick="open_rp_input_div()" style="height: 50px; width: 50px;">
+                                        <i class="fas fa-pen"></i>
+                                    </button>
                                 </div>
 
                                 <div class="rp_input_form">
@@ -313,16 +316,11 @@
                                     
                                 </s_rp_container>
 
-                                
-
-                                
                             </s_rp>
                         </div>
                         <!--포스팅 댓글 영역 끝-->
                     </s_article_rep>
                     <!--포스팅 글 영역 끝-->
-
-                    
                     
 
                     <!--방명록 페이지 시작-->
@@ -333,8 +331,8 @@
                              </div>
 
                             <div style="margin: 0 auto 0 auto; max-width: 800px; padding: 20px;">
-                             <button class="submit-btn" onclick="open_guest_input_div()">
-                                        <i class="fas fa-pen"></i> 방명록 남기기
+                             <button onclick="open_guest_input_div()" style="height: 50px; width: 50px;">
+                                        <i class="fas fa-pen"></i>
                               </button>
                             </div>            
 
@@ -533,6 +531,8 @@
 
                 <!--사이드바 시작-->
                 <div id="sidebar" class="sidenav">
+                    
+
                     <s_sidebar>
 
                         <s_sidebar_element>
@@ -540,7 +540,9 @@
                             <div class="sidebar_element">
                                 <div class="sidebar-title">ads</div>
                                 <div class="sidebar-body sidebar_ads">
-                                    <!--광고 코드를 여기에 넣어주세요-->                   
+                                    <!--광고 코드를 여기에 넣어주세요-->
+                                    
+
                                     
                                 </div>
                             </div>
@@ -701,10 +703,6 @@
                                 </div>
                             </div>
                         </s_sidebar_element>
-
-                        
-                        
-
                     </s_sidebar>
 
                 </div>
@@ -778,16 +776,9 @@
                 lastScrollTop = st;
             }
 
-
-
         </script>
 
         <script>
-
-            // $(window).load(function(){
-                
-            // });
-
             $(document).ready(function(){
                 var Mode = localStorage["Mode"];
                 if (Mode=="lightmode"){
@@ -817,6 +808,7 @@
                     localStorage["Mode"] = "lightmode";
                     $("#container").css({"background-color":"white"});
                     $(".article").css({"color":"black"});
+                    // $(".article span").attr('style', 'color:black !important');
                     $("#notice").css({"color":"black"});
                     $("#protect").css({"color":"black"});
                     $("#paging a").css({"color":"black"});
@@ -835,6 +827,8 @@
                     localStorage["Mode"] = "darkmode";
                     $("#container").css({"background-color":"#141617"});
                     $(".article").css({"color":"lightgray"});
+                    // $(".article span[color='#333333']").addClass('color_error_darkmode');
+                    // $(".article span").attr('style', 'color:lightgray !important');
                     $("#notice").css({"color":"lightgray"});
                     $("#protect").css({"color":"lightgray"});
                     $("#paging a").css({"color":"white"});
