@@ -442,9 +442,14 @@ header #header-menu a {
     background-color: white;
 }
 
-#container .article h2, h3, h4, h5, h6 {
-    border-bottom: 2px solid dodgerblue;
+#container .article h2 {
+    border-bottom: 4px double dodgerblue;
     padding-bottom: 10px;
+}
+
+#container .article h3, h4, h5, h6 {
+    border-left: 5px solid gray;
+    padding-left: 10px;
 }
 
 #container #notice {
