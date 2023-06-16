@@ -2,16 +2,16 @@
 <skin>
 <information>
 <name>리눅스킨 LinuXkin</name> 
-<version>4.3.6</version>
+<version>4.3.7</version>
 <description>
-<![CDATA[ HTML5, CSS 3 기반으로 만들어진 Tistory 스킨입니다.]]>
+<![CDATA[ HTML5, CSS3 기반으로 만들어진 Tistory 스킨입니다.]]>
 </description>
 <license>
 <![CDATA[자유롭게 수정이 가능하며, 재배포는 불가능합니다. 배포는 제작자의 홈페이지에서만 가능합니다.]]>
 </license>
 </information> 
 <author>
-<name>코딩재개발</name>
+<name>bskyvision</name>
 <homepage>https://bskyvision.com</homepage>
 <email>kyohoonsim@gmail.com</email>
 </author> 
