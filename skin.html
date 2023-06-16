@@ -122,7 +122,6 @@
                             </div>
                         </div>
                         <div id="notice">
-                            
                             <div class="main-contents">
                                 [##_notice_rep_desc_##]
                             </div>      
@@ -194,17 +193,10 @@
                         <!--포스팅 댓글 영역 시작-->
                         <div class="comment">
                             <s_rp>
-                                <div style="margin: 0 auto 0 auto; max-width: 800px; padding: 20px;">
-                                    
-                                    <div class="postit">
-                                        <div>글을 읽던 중에 궁금했던 부분은 질문해주세요.</div>
-                                        <div>칭찬, 지적, 의문, 격려, 감사표현 등을 남겨주세요.</div>
-                                        <div>최대한 답변 드리도록 노력하겠습니다.</div>
-                                        <div>욕설과 광고를 담은 댓글은 가차없이 삭제합니다.</div>
-                                    </div>
-
-                                    <button onclick="open_rp_input_div()" style="height: 50px; width: 50px;">
-                                        <i class="fas fa-pen"></i>
+                                <div class="main-title">
+                                    <span>댓글</span>
+                                    <button onclick="open_rp_input_div()" style="float: right;">
+                                        댓글쓰기
                                     </button>
                                 </div>
 
@@ -329,13 +321,14 @@
                     <s_guest>
                         <div id="guest">
                             <div class="main-title">
-                                방명록
+                                <span>방명록</span>
+                                <button onclick="open_guest_input_div()" style="float: right;">
+                                    방명록쓰기
+                                </button>
                              </div>
 
                             <div style="margin: 0 auto 0 auto; max-width: 800px; padding: 20px;">
-                             <button onclick="open_guest_input_div()" style="height: 50px; width: 50px;">
-                                        <i class="fas fa-pen"></i>
-                              </button>
+                             
                             </div>            
 
                             <div class="guest_input_form">
@@ -509,7 +502,7 @@
 
                     <!-- 카피라이터 부분입니다. 절대 수정하시면 안됩니다! -->
                     <div id="copy">
-                         ⓒ <a href="[##_blog_link_##]">[##_title_##]</a>. Designed by <a href="https://bskyvision.com/" title="스킨개발자">코딩재개발.</a>    
+                         ⓒ <a href="[##_blog_link_##]">[##_title_##]</a>. Designed by <a href="https://bskyvision.com/" title="스킨개발자">bskyvision.</a>    
                     </div>
 
                     <!--푸터 시작-->
@@ -543,8 +536,6 @@
                                 <div class="sidebar-title">ads</div>
                                 <div class="sidebar-body sidebar_ads">
                                     <!--광고 코드를 여기에 넣어주세요-->
-                                    
-
                                     
                                 </div>
                             </div>
@@ -631,7 +622,7 @@
                                 <div class="sidebar-title">ads</div>
                                 <div class="sidebar-body sidebar_ads">
                                     <!--광고 코드를 여기에 넣어주세요-->
-                                    
+
                                 </div>
                             </div>
 
@@ -803,14 +794,12 @@
                         $('#sidebar-mobile').removeClass('emphasized');
                     } 
                 });
-
             });
 
             function modechange(){
                     localStorage["Mode"] = "lightmode";
                     $("#container").css({"background-color":"white"});
                     $(".article").css({"color":"black"});
-                    // $(".article span").attr('style', 'color:black !important');
                     $("#notice").css({"color":"black"});
                     $("#protect").css({"color":"black"});
                     $("#paging a").css({"color":"black"});
@@ -822,15 +811,12 @@
                     $("#category a ").css({"color":"black"});
                     $("#mode").css({"color":"yellow"});
                     $("#mode").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드' onclick=" + "'modechange1();'></i>");
-
             };
 
             function modechange1(){
                     localStorage["Mode"] = "darkmode";
                     $("#container").css({"background-color":"#141617"});
                     $(".article").css({"color":"lightgray"});
-                    // $(".article span[color='#333333']").addClass('color_error_darkmode');
-                    // $(".article span").attr('style', 'color:lightgray !important');
                     $("#notice").css({"color":"lightgray"});
                     $("#protect").css({"color":"lightgray"});
                     $("#paging a").css({"color":"white"});
@@ -842,7 +828,6 @@
                     $("#category a ").css({"color":"lightgray"});
                     $("#mode").css({"color":"white"});
                     $("#mode").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드' onclick=" + "'modechange();'></i>");
-
             };
 
             function js_Load(){
@@ -866,7 +851,5 @@
             }
 
         </script>
-
-
     </body>
 </html>
