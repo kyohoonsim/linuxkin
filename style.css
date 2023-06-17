@@ -442,14 +442,12 @@ header #header-menu a {
     background-color: white;
 }
 
-#container .article .main-contents h2 {
+#container .article .main-contents h2, h3, h4 {
     position: relative;
     background-color: black; 
     color: white;
     padding: 10px;
-    font-size: 16px !important;
-    margin-left: 20px;
-    
+        
     &:before {
         content: '';
         position: absolute;
@@ -460,46 +458,21 @@ header #header-menu a {
         height: 15px;
         border-radius: 50%; 
     }
+}
+
+#container .article .main-contents h2 {
+    font-size: 16px !important;
+    margin-left: 20px;
 }
 
 #container .article .main-contents h3 {
-    position: relative;
-    background-color: black;
-    color: white;
-    padding: 10px;
     font-size: 14px !important;
     margin-left: 40px;
-
-    &:before {
-        content: '';
-        position: absolute;
-        left: -20px;
-        top: 0;
-        background: #1E5BBC;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%; 
-    }
 }
 
 #container .article .main-contents h4 {
-    position: relative;
-    background-color: black;
-    color: white;
-    padding: 10px;
     font-size: 12px !important;
     margin-left: 60px;
-
-    &:before {
-        content: '';
-        position: absolute;
-        left: -20px;
-        top: 0;
-        background: #1E5BBC;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%; 
-    }
 }
 
 /* .another_category h4 {
