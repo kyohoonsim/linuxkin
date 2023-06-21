@@ -32,3 +32,11 @@
 - dolzi: <https://dolzi.tistory.com/>
 
 감사의 인사를 전달드립니다.
+
+## 혹시 파이썬 공부하고 싶은 분들께
+
+제가 쓴 <쓸모있는 파이썬 프로그램 40개>를 추천드립니다.
+
+### 구매처
+
+- 교보문고: <https://product.kyobobook.co.kr/detail/S000202678019>
