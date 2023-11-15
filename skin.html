@@ -746,6 +746,7 @@
         <script>
             $(document).ready(function(){
                 var Mode = localStorage["Mode"];
+
                 if (Mode=="lightmode"){
                     modechange();
                 } 
@@ -761,11 +762,16 @@
 
                 $(document).mouseup(function (e){
                     var target = $("#sidebar-mobile");
-                    if(target.has(e.target).length===0) {
+                    if(target.has(e.target).length === 0) {
                         target.hide();
                         $('#sidebar-mobile').removeClass('emphasized');
                     } 
                 });
+
+                console.log($('.commentList > ol > li').length);
+                if ($('.commentList > ol > li').length === 0){
+                    $('.commentList').html("<div>아직 작성된 댓글이 없습니다. 첫번째 댓글의 주인이 되어주세요.</div>");
+                }
             });
 
             function modechange(){
