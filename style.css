@@ -1,4 +1,4 @@
-/* 전체 CSS*/
+/* 전체 */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 @font-face {
@@ -8,8 +8,7 @@
     font-style: normal;
 }
 
-body,
-html {
+body, html {
     margin: 0;
     color: white;
     background-color: #141617;
@@ -19,6 +18,56 @@ html {
     white-space: normal;
     word-break:break-all;
 }
+
+/* 헤더 영역 */
+header {
+    display:flex; 
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    font-size: large;
+    background-color: #2F3336;
+    z-index: 5;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    /* transition: 0.5s; */
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.header_nav {
+    display: inline;
+}
+
+header .header_nav a {
+    margin: 0 10px;
+    font-size: medium;
+}
+
+.blog_name {
+    margin-left:5px;
+    margin-right:15px;
+    font-weight: bold;
+} 
+
+.light_dark_mode_btn {
+    margin-right:5px; 
+    font-size: x-large;
+}
+
+
+
+
+
+
+
 
 .emphasized {
     box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
@@ -162,37 +211,7 @@ a:hover {
     bottom: 0px; 
 }
 
-/* 헤더 CSS */
-header {
-    display:flex; 
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    font-size: large;
-    background-color: #2F3336;
-    z-index: 5;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    /* transition: 0.5s; */
-}
 
-header a {
-    text-decoration: none;
-    color: white;
-}
-
-#header-menu {
-    display: inline;
-}
-
-header #header-menu a {
-    margin: 0 10px;
-    font-size: medium;
-}
 
 .cursor {
 	position: relative;
@@ -865,7 +884,7 @@ footer a:hover {
 
 /* 버튼 디자인 시작 */
 /* 사이드바 열기 버튼 */
-#btn-open {
+.btn_sidebar_open {
     display: none;
 }
 
@@ -916,12 +935,15 @@ footer a:hover {
         display: none;    
     }
 
-    #header-menu {
+    .header_nav {
         display: none;
     }
 
-    #btn-open {
+    .btn_sidebar_open {
         display: inline;
+        cursor: pointer; 
+        margin-right: 5px; 
+        font-size: x-large;
     }
 
     .sidenav-mobile {

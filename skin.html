@@ -34,30 +34,25 @@
     <body style="visibility: hidden;" onload="js_Load()">
         <s_t3>
             <header>
-                <span>
-                    <a href="[##_blog_link_##]" style="margin-left:5px; margin-right:15px; font-weight: bold;">[##_title_##]</a>
+                <div>
+                    <a href="[##_blog_link_##]" id="blogName" class="blog_name">[##_title_##]</a>
 
-                    <span id="header-menu">
+                    <nav class="header_nav">
                         <!-- <a href="[##_blog_link_##]rss" target="_blank">RSS</a>   -->
                         <a href="[##_taglog_link_##]">태그</a>
                         <a href="[##_blog_link_##]admin/">관리</a>
                         <a href="[##_blog_link_##]manage/newpost/">글쓰기</a>
                         <a href="[##_blog_link_##]guestbook">방명록</a>
+                    </nav>
+                </div>
+                <div>
+                    <span id="lightDarkModeBtn" class="light_dark_mode_btn">
+                        <i id="bulb" class="far fa-lightbulb" title="라이트모드" onclick="toDarkMode();"></i>
                     </span>
-                </span>
-
-                <span>
-                    <span id="mode" style="margin-right:5px; font-size: x-large;"><i id="bulb" class="far fa-lightbulb" title="라이트모드" onclick="modechange();"></i></span>
-
-                    <span
-                        id ="btn-open"
-                        class="btn-open"
-                        style="cursor:pointer; margin-right:5px; font-size: x-large;">
+                    <span id="btnSidebarOpen" class="btn_sidebar_open">
                         <i class="fas fa-bars"></i>
                     </span> 
-                </span>
-
-                
+                </div>
             </header>
 
             <div id="container_and_sidebar">
@@ -477,22 +472,7 @@
                          ⓒ <a href="[##_blog_link_##]">[##_title_##]</a>. Designed by <a href="https://bskyvision.com/" title="스킨개발자">bskyvision.</a>    
                     </div>
 
-                    <!--푸터 시작-->
-                    <footer>
-                        <a href="[##_blog_link_##]" style="color:#4791CF; margin-left:5px;">guest@[##_title_##]</a>  ~$
-                    <s_search>
-                        <span class="cursor">
-                            <input
-                                type="text"
-                                name="[##_search_name_##]"
-                                value="[##_search_text_##]"
-                                onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"
-                                style="width:150px; border: none; background: transparent; color:white; outline: none;">
-                            <i></i>
-                        </span>
-                    </s_search>
-                    </footer>
-                    <!--푸터 끝-->
+                    
                 </div>
                 <!--콘테이너 끝-->
 
@@ -694,7 +674,23 @@
             </div>
             <!--모바일 사이드바 끝-->
 
-            
+            <!--푸터 시작-->
+            <footer>
+                <a href="[##_blog_link_##]" style="color:#4791CF; margin-left:5px;">guest@[##_title_##]</a>  ~$
+            <s_search>
+                <span class="cursor">
+                    <input
+                        type="text"
+                        name="[##_search_name_##]"
+                        value="[##_search_text_##]"
+                        onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"
+                        style="width:150px; border: none; background: transparent; color:white; outline: none;">
+                    <i></i>
+                </span>
+            </s_search>
+            </footer>
+            <!--푸터 끝-->
+    
         </s_t3>
 
         <script>
@@ -748,13 +744,13 @@
                 var Mode = localStorage["Mode"];
 
                 if (Mode=="lightmode"){
-                    modechange();
+                    toDarkMode();
                 } 
                 if (Mode=="darkmode"){
-                    modechange1();
+                    toLightMode();
                 }
 
-                $(document).on("click", ".btn-open", function (e){
+                $(document).on("click", "#btnSidebarOpen", function (e){
                     var target = $("#sidebar-mobile");
                     target.show();
                     $('#sidebar-mobile').addClass('emphasized');
@@ -774,7 +770,7 @@
                 }
             });
 
-            function modechange(){
+            function toDarkMode(){
                     localStorage["Mode"] = "lightmode";
                     $("#container").css({"background-color":"white"});
                     $(".article").css({"color":"black"});
@@ -787,11 +783,11 @@
                     $("#guest #respond").css({"color":"black"});
                     $("#guest #guest_list").css({"color":"black"});
                     $("#category a ").css({"color":"black"});
-                    $("#mode").css({"color":"yellow"});
-                    $("#mode").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드' onclick=" + "'modechange1();'></i>");
+                    $("#lightDarkModeBtn").css({"color":"yellow"});
+                    $("#lightDarkModeBtn").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드' onclick=" + "'toLightMode();'></i>");
             };
 
-            function modechange1(){
+            function toLightMode(){
                     localStorage["Mode"] = "darkmode";
                     $("#container").css({"background-color":"#141617"});
                     $(".article").css({"color":"lightgray"});
@@ -804,8 +800,8 @@
                     $("#guest #respond").css({"color":"lightgray"});
                     $("#guest #guest_list").css({"color":"lightgray"});
                     $("#category a ").css({"color":"lightgray"});
-                    $("#mode").css({"color":"white"});
-                    $("#mode").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드' onclick=" + "'modechange();'></i>");
+                    $("#lightDarkModeBtn").css({"color":"white"});
+                    $("#lightDarkModeBtn").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드' onclick=" + "'toDarkMode();'></i>");
             };
 
             function js_Load(){
