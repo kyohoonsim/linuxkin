@@ -1,4 +1,4 @@
-/* 전체 */
+/* common */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 @font-face {
@@ -16,11 +16,45 @@ body, html {
     font-family: 'Nanum Gothic', sans-serif;
     overflow-x: hidden;
     white-space: normal;
-    word-break:break-all;
+    word-break: break-all;
 }
 
-/* 헤더 영역 */
-header {
+.grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid_1_2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-hotpink {
+    color: hotpink;
+}
+
+.text-aqua {
+    color: aqua;
+}
+
+.emphasized {
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+}
+
+/* header 영역 */
+.header {
     display:flex; 
     align-items: center;
     justify-content: space-between;
@@ -34,44 +68,245 @@ header {
     z-index: 5;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    /* transition: 0.5s; */
 }
 
-header a {
+.header a {
     text-decoration: none;
     color: white;
 }
 
-.header_nav {
+.header-nav {
     display: inline;
 }
 
-header .header_nav a {
+.header-nav a {
     margin: 0 10px;
     font-size: medium;
 }
 
-.blog_name {
+.blog-name {
     margin-left:5px;
     margin-right:15px;
     font-weight: bold;
 } 
 
-.light_dark_mode_btn {
+.switch-mode {
     margin-right:5px; 
     font-size: x-large;
 }
 
-
-
-
-
-
-
-
-.emphasized {
-    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+.btn-open-sidebar {
+    display: none;
 }
+
+/* footer 영역 */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background-color: #2F3336;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display:flex; 
+    align-items: center;
+    z-index: 5;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: #8CDCFE; 
+}
+
+.linux-account {
+    color: #4791CF; 
+    margin-left: 5px;
+}
+
+.ipt_search {
+    width:150px;
+    border: none;
+    background: transparent;
+    color:white; outline: none;
+}
+
+.cursor {
+	position: relative;
+}
+
+.cursor	i {
+	position: absolute;
+	width: 10px;
+	height: 3px;
+	background-color: white;
+	left: 0px;
+	top: 90%;
+	animation-name: blink;
+	animation-duration: 800ms;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+.cursor input:focus + i {
+	display: none;
+}
+
+@keyframes blink {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+/* aside 영역 */
+.sidebar {
+    width: 352px;
+    background-color: #212426;
+    border-left: 2px solid black;
+    display: block;
+    height: calc(100% - 52px);
+    position: fixed;
+    top: 52px;
+    right: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    cursor: default;
+    z-index: 10;
+}
+
+.sidebar a {
+    color: white;
+}
+
+.sidebar a:hover {
+    color: hotpink;
+}
+
+.sidebar-title {
+    background-color: #2F3336;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 20px;
+}
+
+.sidebar-body {
+    padding: 20px;
+}
+
+.sidebar-ads {
+    text-align: center;
+}
+
+.img-blog {
+    text-align: center;
+    margin: 0 auto 20px auto;
+    position: relative;
+    width: 200px;
+}
+
+.img-blog img {
+    width: 200px;
+    border-radius: 100%;
+    border: 1px solid gray;
+}
+
+.sidebar-blog-title {
+    font-weight: bold; 
+    font-size: 24px; 
+    margin-bottom: 10px;
+}
+
+.sidebar-blog-blogger {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.ul-sidebar-notice {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ul-sidebar-notice > li {
+    list-style: none;
+}
+
+.ul-sidebar-notice > li > a {
+    color: aqua;
+}
+
+.sidebar-category .sidebar-body > ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none; 
+}
+
+.sidebar-category .sidebar-body > ul > li::before {
+    content: "\f0b1";
+    font-family:"Font Awesome 5 Free";
+    font-weight: 900;
+    color: dodgerblue;
+    margin-right: 5px;
+}
+
+.sidebar-category .sidebar-body > ul > li > ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.sidebar-category .sidebar-body > ul > li > ul > li::before {
+    content: "\f07c";
+    font-family:"Font Awesome 5 Free";
+    font-weight: 900;
+    color: yellow;
+    margin-right: 5px;
+}
+
+.sidebar-category .sidebar-body > ul > li > ul > li > ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.sidebar-category .sidebar-body > ul > li > ul > li > ul > li::before {
+    content: "\f07b";
+    font-family:"Font Awesome 5 Free";
+    font-weight: 900;
+    color: yellow;
+    margin-right: 5px;
+}
+
+.ul-sidebar {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.ul-sidebar > li {
+    list-style: none;
+}
+
+.ul-sidebar > li > a {
+    color: aqua;
+}
+
+/* main 영역 */
+.main {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
 
 /* 티스토리 도메인으로 이동 버튼 */
 #convert a:hover {
@@ -130,9 +365,7 @@ a:hover {
     margin-top: 20px;
 }
 
-.sidebar_ads {
-    text-align:center;
-}
+
 
 .reply-logo {
     width:32px;
@@ -159,31 +392,8 @@ a:hover {
     display: none;
 }
 
-.blogImage {
-    text-align: center;
-    margin: 0 auto 20px auto;
-    position: relative;
-    width: 200px;
-}
 
-.blogImage img {
-    width: 200px;
-    border-radius: 100%;
-    border: 1px solid gray;
-}
 
-#mark {
-    width: 30px;
-    height: 30px;
-    position: absolute; 
-    top: 150px; 
-    left: 160px; 
-    font-size: 20px;
-    padding: 10px;
-    background-color: #212426;
-    border-radius: 100%;
-    border: 1px solid gray;
-}
 
 .nav-up {
     top: -50px;
@@ -213,132 +423,19 @@ a:hover {
 
 
 
-.cursor {
-	position: relative;
-}
-.cursor	i {
-	position: absolute;
-	width: 10px;
-	height: 3px;
-	background-color: white;
-	left: 0px;
-	top: 90%;
-	animation-name: blink;
-	animation-duration: 800ms;
-	animation-iteration-count: infinite;
-	opacity: 1;
-}
-
-.cursor input:focus + i {
-	display: none;
-}
-
-@keyframes blink {
-	from { opacity: 1; }
-	to { opacity: 0; }
-}
-
-
-#container_and_sidebar {
-    display: grid;
-    grid-template-columns: 1fr 350px;
-    margin-top: 50px;
-    /* margin-bottom: 40px; */
-}
 
 
 
-#sidebar-mobile {
-    display:none;
-}
+
+
+
+
+
 
 /* 사이드바 CSS */
-.sidenav {
-    width: 352px;
-    background-color: #212426;
-    border-left: 2px solid black;
-    display: block;
-    height: calc(100% - 52px);
-    position: fixed;
-    top: 52px;
-    right: 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    cursor: default;
-    z-index: 10;
-    /* transition: 0.5s; */
-}
-
-.sidenav a {
-    color: white;
-}
-
-.sidenav a:hover {
-    color: hotpink;
-}
-
-.sidebar-title {
-    background-color: #2F3336;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 10px 20px;
-}
-
-.sidebar-body {
-    padding: 20px;
-}
 
 
-#sidebar_category .sidebar-body > ul {
-    padding-left: 0;
-    margin: 0;
-    list-style: none; 
-}
 
-#sidebar_category .sidebar-body > ul > li::before {
-    content: "\f0b1";
-    font-family:"Font Awesome 5 Free";
-    font-weight: 900;
-    color: dodgerblue;
-    margin-right: 5px;
-}
-
-
-#sidebar_category .sidebar-body > ul > li > ul {
-    padding-left: 20px;
-    list-style: none;
-}
-
-#sidebar_category .sidebar-body > ul > li > ul > li::before {
-    content: "\f07c";
-    font-family:"Font Awesome 5 Free";
-    font-weight: 900;
-    color: yellow;
-    margin-right: 5px;
-}
-
-#sidebar_category .sidebar-body > ul > li > ul > li > ul {
-    padding-left: 20px;
-    list-style: none;
-}
-
-#sidebar_category .sidebar-body > ul > li > ul > li > ul > li::before {
-    content: "\f07b";
-    font-family:"Font Awesome 5 Free";
-    font-weight: 900;
-    color: yellow;
-    margin-right: 5px;
-}
-
-.sidebar_grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-
-.sidebar_grid1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 
 .sidebar_grid_logo {
     display: grid;
@@ -362,50 +459,14 @@ a:hover {
     display: grid;
 }
 
-#sidebar_notice ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#sidebar_notice ul > li {
-    list-style: none;
-}
 
 
-#sidebar_rep ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
 
-#sidebar_rep ul > li {
-    list-style: none;
-}
 
-#sidebar_recent_post ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
 
-#sidebar_recent_post ul > li {
-    list-style: none;
-}
 
-#sidebar_recent_hot ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
 
-#sidebar_recent_hot ul > li {
-    list-style: none;
-}
 
-.sidebar_recent a{
-    color: aqua;
-}
 
 #container {
     width: 100%;
@@ -799,32 +860,6 @@ a:hover {
     background-color: white;
 }
 
-/* 푸터 디자인 시작 */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 40px;
-    width: 100%;
-    background-color: #2F3336;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    display:flex; 
-    align-items: center;
-    z-index: 5;
-}
-
-footer a{
-    text-decoration: none;
-    color: white;
-}
-
-footer a:hover {
-    text-decoration: none;
-    color: #8CDCFE; 
-}
-/* 푸터 디자인 끝 */
-
 .reply-linux {
     color:#4791CF;
     font-weight: bold;
@@ -884,9 +919,7 @@ footer a:hover {
 
 /* 버튼 디자인 시작 */
 /* 사이드바 열기 버튼 */
-.btn_sidebar_open {
-    display: none;
-}
+
 
 /* 댓글, 방명록 작성 버튼 */
 .btn {
@@ -919,34 +952,27 @@ footer a:hover {
 
 /* 반응형 */
 @media (max-width:1200px){
-    #container_and_sidebar {
-        display: block;
-        margin-top: 50px;
-    }
-
-    #sidebar {
-        display: block;
-        width: 100%;
-        position: static;
-        overflow: hidden;
-    }
-
-    #sidebar-mobile {
-        display: none;    
-    }
-
-    .header_nav {
+    /* header 영역 */
+    .header-nav {
         display: none;
     }
 
-    .btn_sidebar_open {
+    .btn-open-sidebar {
         display: inline;
         cursor: pointer; 
         margin-right: 5px; 
         font-size: x-large;
     }
 
-    .sidenav-mobile {
+    .sidebar {
+        display: block;
+        width: 100%;
+        position: static;
+        overflow: hidden;
+    }
+
+    .sidebar-mobile {
+        display: none;   
         height: calc(100% - 52px);
         width: 300px; 
         display: none;
@@ -956,18 +982,21 @@ footer a:hover {
         top: 52px;
         overflow-x: hidden;
         overflow-y: visible;
-        /* transition: 0.5s; */
         padding: 0;
         background-color: #212426;
         border-left: 2px solid black;
     }
 
-    .sidenav-mobile a {
+    .sidebar-mobile a {
         color: white;
     }
     
-    .sidenav-mobile a:hover {
+    .sidebar-mobile a:hover {
         color: hotpink;
     }
-    
+
+    .main {
+        display: block;
+        margin-top: 50px;
+    }    
 }

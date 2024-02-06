@@ -33,12 +33,12 @@
     </head>
     <body style="visibility: hidden;" onload="js_Load()">
         <s_t3>
-            <header>
+            <header id="header" class="header">
                 <div>
-                    <a href="[##_blog_link_##]" id="blogName" class="blog_name">[##_title_##]</a>
+                    <a href="[##_blog_link_##]" class="blog-name">[##_title_##]</a>
 
-                    <nav class="header_nav">
-                        <!-- <a href="[##_blog_link_##]rss" target="_blank">RSS</a>   -->
+                    <nav class="header-nav">
+                        <!-- <a href="[##_blog_link_##]rss" target="_blank">RSS</a> -->
                         <a href="[##_taglog_link_##]">태그</a>
                         <a href="[##_blog_link_##]admin/">관리</a>
                         <a href="[##_blog_link_##]manage/newpost/">글쓰기</a>
@@ -46,19 +46,18 @@
                     </nav>
                 </div>
                 <div>
-                    <span id="lightDarkModeBtn" class="light_dark_mode_btn">
+                    <span id="switchMode" class="switch-mode">
                         <i id="bulb" class="far fa-lightbulb" title="라이트모드" onclick="toDarkMode();"></i>
                     </span>
-                    <span id="btnSidebarOpen" class="btn_sidebar_open">
+                    <span id="btnOpenSidebar" class="btn-open-sidebar">
                         <i class="fas fa-bars"></i>
                     </span> 
                 </div>
             </header>
 
-            <div id="container_and_sidebar">
-
-            <!--콘테이너 시작-->
-                <div id="container">
+            <main class="main">
+                <!--콘테이너 시작-->
+                <article id="container">
                     <!--검색 결과 또는 카테고리 클릭시 나오는 페이지 시작-->
                     <s_list>
                         <div class="main-title">
@@ -279,7 +278,6 @@
                     </s_article_rep>
                     <!--포스팅 글 영역 끝-->
                     
-
                     <!--방명록 페이지 시작-->
                     <s_guest>
                         <div id="guest">
@@ -409,8 +407,6 @@
                     </s_tag>
                     <!--태그 페이지 끝-->
 
-                    
-                    
                     <!-- 보호글 시작 -->
                     <s_article_protected>
                         <div class="main-title">
@@ -471,47 +467,46 @@
                     <div id="copy">
                          ⓒ <a href="[##_blog_link_##]">[##_title_##]</a>. Designed by <a href="https://bskyvision.com/" title="스킨개발자">bskyvision.</a>    
                     </div>
-
-                    
-                </div>
+                </article>
                 <!--콘테이너 끝-->
 
-                <!--사이드바 시작-->
-                <div id="sidebar" class="sidenav">
-                    
-
+                <aside id="sidebar" class="sidebar">
                     <s_sidebar>
-
                         <s_sidebar_element>
                             <!--사이드바 광고1-->
-                            <div class="sidebar_element">
+                            <div>
                                 <div class="sidebar-title">ads</div>
-                                <div class="sidebar-body sidebar_ads">
+                                <div class="sidebar-body sidebar-ads">
                                     <!--광고 코드를 여기에 넣어주세요-->
-                                    
                                 </div>
                             </div>
+                        </s_sidebar_element>
 
+                        <s_sidebar_element>
+                            <!--사이드바 광고2-->
+                            <div>
+                                <div class="sidebar-title">ads</div>
+                                <div class="sidebar-body sidebar-ads">
+                                    <!--광고 코드를 여기에 넣어주세요-->
+                                </div>
+                            </div>
                         </s_sidebar_element>
 
                         <s_sidebar_element>
                             <!--소개-->
-                            <div id="sidebar_intro" class="sidebar_element">
+                            <div>
                                 <div class="sidebar-title">introduce</div>
-                                
                                 <div class="sidebar-body">
-                                    <div class="blogImage">
+                                    <div class="img-blog">
                                         <img src="[##_image_##]">
-                                        <!-- <div id="mark" title="기술블로그마크">&#x1F4BB</div> -->
                                     </div>
-                                
-                                    <div style="font-weight: bold; font-size: 24px; margin-bottom: 10px;">
+                                    <div class="sidebar-blog-title">
                                         [##_title_##]
                                     </div>
-                                    <div style="color: gray; margin-bottom: 20px;">
+                                    <div class="sidebar-blog-blogger">
                                         [##_blogger_##]
                                     </div>
-                                    <div>
+                                    <div class="sidebar-blog-desc">
                                     [##_desc_##]
                                     </div>
                                 </div>
@@ -520,20 +515,22 @@
 
                         <s_sidebar_element>
                             <!--통계-->
-                            <div id="sidebar_statistics" class="sidebar_element">
+                            <div>
                                 <div class="sidebar-title">statistics</div>
                                 <div class="sidebar-body">
-                                    <div class="sidebar_grid">
+                                    <div class="grid_1_2">
                                         <div>total</div>
-                                        <div style="text-align:right">[##_count_total_##]</div>
+                                        <div class="text-right">[##_count_total_##]</div>
                                     </div>
-                                    <div class="sidebar_grid">
+                                    <div class="grid_1_2">
                                         <div>yesterday</div>
-                                        <div style="text-align:right">[##_count_yesterday_##]</div>
+                                        <div class="text-right">[##_count_yesterday_##]</div>
                                     </div>
-                                    <div class="sidebar_grid">
+                                    <div class="grid_1_2">
                                         <div>today</div>
-                                        <div style="text-align:right; color: hotpink;"><i class="fas fa-walking"></i> [##_count_today_##]</div>
+                                        <div class="text-right text-hotpink">
+                                            <i class="fas fa-walking"></i> [##_count_today_##]
+                                        </div>
                                     </div>
                                 </div> 
                             </div>
@@ -541,26 +538,27 @@
 
                         <s_sidebar_element>
                             <!--공지-->
-                            <div id="sidebar_notice" class="sidebar_element">
+                            <div>
                                 <div class="sidebar-title">notice</div>
                                 <div class="sidebar-body">
                                     <s_rct_notice>
-                                        <ul>
+                                        <ul class="ul-sidebar-notice">
                                             <s_rct_notice_rep>
-                                                <li class="sidebar_recent"><a href="[##_notice_rep_link_##]"><i class="fas fa-exclamation-circle"></i> [##_notice_rep_title_##]</a> </li>
+                                                <li>
+                                                    <a href="[##_notice_rep_link_##]">
+                                                        <i class="fas fa-exclamation-circle"></i> [##_notice_rep_title_##]
+                                                    </a>
+                                                </li>
                                             </s_rct_notice_rep>
                                         </ul>
                                     </s_rct_notice>
                                 </div>
                             </div>
-
                         </s_sidebar_element>
-                        
                         
                         <s_sidebar_element>
                             <!--카테고리-->
-                            
-                            <div id="sidebar_category" class="sidebar_element">
+                            <div class="sidebar-category">
                                 <div class="sidebar-title">category</div>
                                 <div class="sidebar-body">
                                     [##_category_list_##] 
@@ -569,30 +567,20 @@
                         </s_sidebar_element>
 
                         <s_sidebar_element>
-                            <!--사이드바 광고2-->
-                            <div class="sidebar_element">
-                                <div class="sidebar-title">ads</div>
-                                <div class="sidebar-body sidebar_ads">
-                                    <!--광고 코드를 여기에 넣어주세요-->
-
-                                </div>
-                            </div>
-
-                        </s_sidebar_element>
-
-                        <s_sidebar_element>
                             <!--최근댓글-->
-                            
-                            <div id="sidebar_rep" class="sidebar_element">
+                            <div>
                                 <div class="sidebar-title">recent comment</div>
                                 <div class="sidebar-body">
-                                    <ul>
+                                    <ul class="ul-sidebar">
                                         <s_rctrp_rep>
-                                            <li class="sidebar_recent">
-                                                <a class="sidebar_grid1" href="[##_rctrp_rep_link_##]">
-                                                    <div style="color:white;">[##_rctrp_rep_time_##] [##_rctrp_rep_name_##]</div>
-                    
-                                                    <div style="text-align:right;">[##_rctrp_rep_desc_##]</div>
+                                            <li>
+                                                <a class="grid_1_1" href="[##_rctrp_rep_link_##]">
+                                                    <div class="text-white">
+                                                        [##_rctrp_rep_time_##] [##_rctrp_rep_name_##]
+                                                    </div>
+                                                    <div class="text-right">
+                                                        [##_rctrp_rep_desc_##]
+                                                    </div>
                                                 </a>
                                             </li>
                                         </s_rctrp_rep>
@@ -603,18 +591,17 @@
 
                         <s_sidebar_element>
                             <!--최근글-->
-                            
-                            <div id="sidebar_recent_post" class="sidebar_element">
+                            <div>
                                 <div class="sidebar-title">recent post</div>
                                 <div class="sidebar-body">
-                                    <ul>
+                                    <ul class="ul-sidebar">
                                         <s_rctps_rep>
-                                            <li class="sidebar_recent">
-                                                <a class="sidebar_grid" href="[##_rctps_rep_link_##]">
-                                                    <div style="color:white;">          
+                                            <li>
+                                                <a class="grid_1_2" href="[##_rctps_rep_link_##]">
+                                                    <div class="text-white">          
                                                         [##_rctps_rep_simple_date_##]
                                                     </div> 
-                                                    <div style="text-align:right;">
+                                                    <div class="text-right">
                                                         [##_rctps_rep_title_##]    
                                                     </div>
                                                 </a>
@@ -627,18 +614,17 @@
 
                         <s_sidebar_element>
                             <!--인기글-->
-
-                            <div id="sidebar_recent_hot" class="sidebar_element">
+                            <div>
                                 <div class="sidebar-title">recent hot</div>
                                 <div class="sidebar-body">
-                                    <ul>
+                                    <ul class="ul-sidebar">
                                         <s_rctps_popular_rep>
-                                            <li class="sidebar_recent">
-                                                <a class="sidebar_grid" href="[##_rctps_rep_link_##]">
-                                                    <div style="color:white;">          
+                                            <li>
+                                                <a class="grid_1_2" href="[##_rctps_rep_link_##]">
+                                                    <div class="text-white">          
                                                         [##_rctps_rep_simple_date_##]
                                                     </div> 
-                                                    <div style="text-align:right;">
+                                                    <div class="text-right">
                                                         [##_rctps_rep_title_##]    
                                                     </div>
                                                 </a>
@@ -649,48 +635,39 @@
                             </div>
                         </s_sidebar_element>
                     </s_sidebar>
+                </aside>
 
-                </div>
-                <!--사이드바 끝-->
-
-            </div>
-
-
-            <!--모바일 사이드바 시작-->
-            <div id="sidebar-mobile" class="sidenav-mobile">
-
-                <!--모바일 카테고리-->
-                <div id="sidebar_category" class="sidebar_element">
-                    <div class="sidebar-title" style="text-align: center;"><a href="[##_blog_link_##]rss" target="_blank">RSS</a>&nbsp;&nbsp;  
-                        <a href="[##_taglog_link_##]">태그</a>&nbsp;&nbsp;
-                        <a href="[##_blog_link_##]admin/">관리</a>&nbsp;&nbsp;
-                        <a href="[##_blog_link_##]manage/newpost/">글쓰기</a>&nbsp;&nbsp;
-                        <a href="[##_blog_link_##]guestbook">방명록</a></div>
-                    <div class="sidebar-body">
-                        [##_category_list_##] 
+                <aside id="sidebarMobile" class="sidebar-mobile">
+                    <!--모바일 카테고리-->
+                    <div class="sidebar-category">
+                        <div class="sidebar-title text-center">
+                            <a href="[##_blog_link_##]rss" target="_blank">RSS</a>&nbsp;&nbsp;  
+                            <a href="[##_taglog_link_##]">태그</a>&nbsp;&nbsp;
+                            <a href="[##_blog_link_##]admin/">관리</a>&nbsp;&nbsp;
+                            <a href="[##_blog_link_##]manage/newpost/">글쓰기</a>&nbsp;&nbsp;
+                            <a href="[##_blog_link_##]guestbook">방명록</a></div>
+                        <div class="sidebar-body">
+                            [##_category_list_##] 
+                        </div>
                     </div>
-                </div>
+                </aside>
+            </main>
 
-            </div>
-            <!--모바일 사이드바 끝-->
-
-            <!--푸터 시작-->
-            <footer>
-                <a href="[##_blog_link_##]" style="color:#4791CF; margin-left:5px;">guest@[##_title_##]</a>  ~$
-            <s_search>
-                <span class="cursor">
-                    <input
-                        type="text"
-                        name="[##_search_name_##]"
-                        value="[##_search_text_##]"
-                        onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"
-                        style="width:150px; border: none; background: transparent; color:white; outline: none;">
-                    <i></i>
-                </span>
-            </s_search>
+            <footer id="footer" class="footer">
+                <a href="[##_blog_link_##]" class="linux-account">guest@[##_title_##]</a>  ~$
+                <s_search>
+                    <span class="cursor">
+                        <input
+                            type="text"
+                            name="[##_search_name_##]"
+                            value="[##_search_text_##]"
+                            onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"
+                            class="ipt_search"
+                        >
+                        <i></i>
+                    </span>
+                </s_search>
             </footer>
-            <!--푸터 끝-->
-    
         </s_t3>
 
         <script>
@@ -698,7 +675,7 @@
 
             var lastScrollTop = 0;
             var delta = 5;
-            var navbarHeight = $('header').outerHeight();
+            var navbarHeight = $('#header').outerHeight();
 
             // 사용자가 스크롤했을 때 didScroll 변수 값은 true로 바뀜
             $(window).scroll(function(event){
@@ -721,17 +698,17 @@
 
                 if (st > lastScrollTop && st > navbarHeight){
                     // Scroll Down
-                    $('header').removeClass('nav-down').addClass('nav-up');
-                    $('.sidenav').removeClass('nav-down1').addClass('nav-up1');
+                    $('#header').removeClass('nav-down').addClass('nav-up');
+                    $('#sidebar').removeClass('nav-down1').addClass('nav-up1');
                     $('.sidenav-mobile').removeClass('nav-down1').addClass('nav-up1');
-                    $('footer').removeClass('nav-down2').addClass('nav-up2');
+                    $('#footer').removeClass('nav-down2').addClass('nav-up2');
 
                 } else if (st + $(window).height() < $(document).height()) {
                     // Scroll Up
-                    $('header').removeClass('nav-up').addClass('nav-down');
-                    $('.sidenav').removeClass('nav-up1').addClass('nav-down1');
+                    $('#header').removeClass('nav-up').addClass('nav-down');
+                    $('#sidebar').removeClass('nav-up1').addClass('nav-down1');
                     $('.sidenav-mobile').removeClass('nav-up1').addClass('nav-down1');
-                    $('footer').removeClass('nav-up2').addClass('nav-down2');
+                    $('#footer').removeClass('nav-up2').addClass('nav-down2');
                 }
 
                 lastScrollTop = st;
@@ -750,23 +727,23 @@
                     toLightMode();
                 }
 
-                $(document).on("click", "#btnSidebarOpen", function (e){
-                    var target = $("#sidebar-mobile");
+                $(document).on("click", "#btnOpenSidebar", function (e){
+                    var target = $("#sidebarMobile");
                     target.show();
-                    $('#sidebar-mobile').addClass('emphasized');
+                    $('#sidebarMobile').addClass('emphasized');
                 });
 
                 $(document).mouseup(function (e){
-                    var target = $("#sidebar-mobile");
+                    var target = $("#sidebarMobile");
                     if(target.has(e.target).length === 0) {
                         target.hide();
-                        $('#sidebar-mobile').removeClass('emphasized');
+                        $('#sidebarMobile').removeClass('emphasized');
                     } 
                 });
 
                 console.log($('.commentList > ol > li').length);
                 if ($('.commentList > ol > li').length === 0){
-                    $('.commentList').html("<div>아직 작성된 댓글이 없습니다. 첫번째 댓글의 주인이 되어주세요.</div>");
+                    $('.commentList').html("<div>아직 작성된 댓글이 없습니다. 첫 번째 댓글의 주인이 되어주세요.</div>");
                 }
             });
 
@@ -783,8 +760,8 @@
                     $("#guest #respond").css({"color":"black"});
                     $("#guest #guest_list").css({"color":"black"});
                     $("#category a ").css({"color":"black"});
-                    $("#lightDarkModeBtn").css({"color":"yellow"});
-                    $("#lightDarkModeBtn").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드' onclick=" + "'toLightMode();'></i>");
+                    $("#switchMode").css({"color":"yellow"});
+                    $("#switchMode").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드' onclick=" + "'toLightMode();'></i>");
             };
 
             function toLightMode(){
@@ -800,8 +777,8 @@
                     $("#guest #respond").css({"color":"lightgray"});
                     $("#guest #guest_list").css({"color":"lightgray"});
                     $("#category a ").css({"color":"lightgray"});
-                    $("#lightDarkModeBtn").css({"color":"white"});
-                    $("#lightDarkModeBtn").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드' onclick=" + "'toDarkMode();'></i>");
+                    $("#switchMode").css({"color":"white"});
+                    $("#switchMode").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드' onclick=" + "'toDarkMode();'></i>");
             };
 
             function js_Load(){
