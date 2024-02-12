@@ -19,6 +19,37 @@ body, html {
     word-break: break-all;
 }
 
+a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: hotpink;
+    
+}
+
+/* input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #000 inset;
+    -webkit-text-fill-color: #fff;
+}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { 
+    transition: background-color 5000s ease-in-out 0s; 
+} */
+
 .grid_1_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -37,8 +68,24 @@ body, html {
     text-align: right;
 }
 
+.text-bolder {
+    font-weight: bolder;
+}
+
+.text-14px {
+    font-size: 14px;
+}
+
+.text-black {
+    color: black;
+}
+
 .text-white {
     color: white;
+}
+
+.text-gray {
+    color: gray;
 }
 
 .text-hotpink {
@@ -49,8 +96,134 @@ body, html {
     color: aqua;
 }
 
+.text-dodgerblue {
+    color: dodgerblue;
+}
+
+.text-yellow {
+    color: yellow;
+}
+
 .emphasized {
     box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+}
+
+.ads {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.btn-open {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    background-color: #1E5BBC;
+    border: none;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    font-size: large;
+}
+
+.btn-submit {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    border: 1px gray solid;
+    border-radius: 0;
+    background-color: lightgray;
+    color: black;
+    margin: 10px 0;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.ipt-basic {
+    display: block;
+    width: 100%;
+    height: 30px; 
+    border: 1px gray solid;
+    border-radius: none;
+    margin: 10px 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    font-size: medium;
+}
+
+.ipt-basic:focus {
+    outline: none;
+    background-color: white;
+}
+
+.ta-basic {
+    display: block;
+    width: 100%;
+    height: 150px; 
+    border: 1px gray solid;
+    border-radius: none;
+    margin: 10px 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    font-size: medium;
+}
+
+.ta-basic:focus {
+    outline: none;
+    background-color: white;
+}
+
+.linux {
+    color:#4791CF;
+    font-weight: bold;
+}
+
+.linux a {
+    color:#4791CF !important; 
+    font-weight: bold;
+}
+
+.linux1 {
+    color:#B86E30;
+    font-weight: bold;
+}
+
+.linux1 a {
+    color:#B86E30 !important;
+    font-weight: bold;
+}
+
+.linux2 {
+    color: #9CDCF0;
+}
+
+.nav-up {
+    top: -50px !important;
+}
+
+.nav-down {
+    top: 0 !important;
+}
+
+.nav-up1 {
+    top: 0px !important;
+    height: 100% !important;
+}
+
+.nav-down1 {
+    top: 54px !important; 
+    height: calc(100% - 54px) !important;
+}
+
+.nav-up2 {
+    bottom: -40px !important;
+}
+
+.nav-down2 {
+    bottom: 0px !important; 
 }
 
 /* header 영역 */
@@ -114,19 +287,15 @@ body, html {
     z-index: 5;
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
-    color: white;
+    color: #4791CF;
+    
 }
 
 .footer a:hover {
     text-decoration: none;
-    color: #8CDCFE; 
-}
-
-.linux-account {
     color: #4791CF; 
-    margin-left: 5px;
 }
 
 .ipt_search {
@@ -162,6 +331,66 @@ body, html {
 	to { opacity: 0; }
 }
 
+/* main 영역 */
+.main {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    margin-top: 50px;
+}
+
+.main-title {
+    background-color: #2F3336;
+    border-bottom: 1px solid black;
+    padding: 10px 5px;
+    text-align: justify;
+    font-size: large;
+    border-top: 2px solid dodgerblue;
+}
+
+.main-title a {
+    color: white;
+}
+
+.main-title a:hover {
+    color: hotpink;
+}
+
+.main-category {
+    color: gray;
+    font-size: medium;
+
+}
+
+.main-category a {
+    text-decoration: none;
+    color: gray;
+}
+
+.main-category a:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+.main-time {
+    display: block;
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    text-align: right;
+}
+
+.main-contents {
+    display: relative;
+    text-align: justify;
+	font-size: large; 
+    line-height: 1.5;
+	font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.main-contents a {
+    text-decoration: underline;
+}
+
 /* aside 영역 */
 .sidebar {
     width: 352px;
@@ -195,10 +424,6 @@ body, html {
 
 .sidebar-body {
     padding: 20px;
-}
-
-.sidebar-ads {
-    text-align: center;
 }
 
 .img-blog {
@@ -293,182 +518,8 @@ body, html {
     color: aqua;
 }
 
-/* main 영역 */
-.main {
-    display: grid;
-    grid-template-columns: 1fr 350px;
-    margin-top: 50px;
-}
-
-
-
-
-
-
-
-
-
-/* 티스토리 도메인으로 이동 버튼 */
-#convert a:hover {
-    color: white;
-}
-
-input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px #000 inset ; -webkit-text-fill-color: #fff; }
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: background-color 5000s ease-in-out 0s; }
-
-.inputs {
-    display: block;
-    width: 100%; 
-    border: none;
-    border-radius: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-bottom: 1px gray solid;
-    background-color: black;
-    color: white;
-    font-size: medium;
-}
-
-.inputs:focus {
-    outline: none;
-    background-color: black;
-}
-
-
-a {
-    text-decoration: none;
-    color: dodgerblue;
-}
-a:link {
-    text-decoration: none;
-}
-a:visited {
-    text-decoration: none;
-}
-a:active {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: none;
-    color: hotpink;
-    
-}
-
-/* 애드센스 자동광고 여백주기 */
-.ap_container {
-    margin-top: 20px;
-}
-
-.ads {
-    text-align:center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-
-
-.reply-logo {
-    width:32px;
-    height:32px;
-    background-color:black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 100%;
-    box-shadow: 1px 1px 3px 1px #dadce0;
-}
-
-.rp_admin img {
-    display: none;
-}
-.rp_general img {
-    display: none;
-}
-
-.guest_admin img {
-    display: none;
-}
-.guest_general img {
-    display: none;
-}
-
-
-
-
-.nav-up {
-    top: -50px;
-}
-
-.nav-down {
-    top: 0;
-}
-
-.nav-up1 {
-    top: 0px !important;
-    height: 100% !important;
-}
-
-.nav-down1 {
-    top: 54px !important; 
-    height: calc(100% - 54px) !important;
-}
-
-.nav-up2 {
-    bottom: -40px;
-}
-
-.nav-down2 {
-    bottom: 0px; 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* 사이드바 CSS */
-
-
-
-
-.sidebar_grid_logo {
-    display: grid;
-    grid-template-columns: 50px 150px 1fr;
-}
-
-.sidebar_grid_info {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    align-items: center;
-}
-
-.main_grid {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-    min-height: 80px;
-}
-
-.main_grid_sub {
-    display: grid;
-}
-
-
-
-
-
-
-
-
-
-
-#container {
+/* article 영역 */
+.article {
     width: 100%;
     height: 100%;
     background-color: #141617;
@@ -477,19 +528,66 @@ a:hover {
     margin-right: auto;
 }
 
-#container .article {
+.post-list {
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.post-list a {
+    color: lightgray;
+}
+
+.post-list a:hover {
+    color: hotpink;
+}
+
+.post-list > ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.post-list > ul > li {
+    border-bottom: solid 1px #EAECEF;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.post-list-grid {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    min-height: 80px;
+}
+
+.post-list-thumbnail {
+    background-color: white;
+    width:80px; 
+    height:50px; 
+    min-width:80px; 
+    min-height:50px; 
+    object-fit: cover;
+}
+
+.post-list-regdate-rpcnt {
+    color: gray; 
+    font-size: small; 
+    margin-top: 5px;
+}
+
+.post {
     color: lightgray;
     padding: 20px;
     max-width: 800px;
     margin: auto;
 }
 
-#container .article img {
+.post img {
     background-color: white;
 }
 
-/* 본문 소제목 디자인 시작 */
-#container .article .main-contents h2, h3, h4 {
+.post .main-contents h2, h3, h4 {
     position: relative;
     background-color: lightgray; 
     color: black;
@@ -507,7 +605,161 @@ a:hover {
         height: 15px;
     }
 }
-/* 본문 소제목 디자인 끝 */
+
+.tag-list {
+    font-size: 16px;
+    text-align: right;
+    color: dodgerblue;
+}
+
+.tag-list a {
+    text-decoration: none;
+}
+
+.tag-list a:before {
+    content: '#';
+}
+
+.comment {
+    text-align: justify;
+    font-size: large;
+    line-height: 1.5;
+	font-family: 'NEXON Lv1 Gothic OTF'; 
+} 
+
+.comment a {
+    color: lightgray;
+}
+
+.comment a:hover {
+    color: hotpink;
+}
+
+.reply-input-form {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.comment-write {
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px !important;
+    width: 300px;
+}
+
+.comment-list {
+    color: lightgray;
+    text-align: justify;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.comment-list > ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+.comment-list > ol > li {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.comment-list > ol > li > ul {
+    padding-left: 20px;
+}
+
+.comment-list > ol > li > ul > li {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+
+.address, .write, .modify {
+    color: #93C25C !important;
+}
+
+.rp_admin img {
+    display: none;
+}
+.rp_general img {
+    display: none;
+}
+
+.guest_admin img {
+    display: none;
+}
+.guest_general img {
+    display: none;
+}
+
+.protect {
+    color: lightgray;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.tag {
+    text-align: justify;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.tag > ul {
+    padding-left: 0;
+}
+
+.tag > ul > li {
+    list-style: none;
+    display: inline-block;
+}
+
+.paging {
+    margin-bottom: 40px;
+}
+
+.paging a {
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+}
+
+.paging a:hover {
+    font-size: larger;
+}
+
+.paging .selected {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.copyright {
+    padding: 5px 10px;
+    text-align: right;
+}
+
+/* tistory 영역 */
+.another_category {     
+    /* 포스팅 본문 내에서 카테고리 내 다른 글 안보이게 하기 */
+    display: none;
+}
 
 /* .another_category h4 {
     background-color: transparent !important;
@@ -525,434 +777,28 @@ a:hover {
     }
 } */
 
-#container #notice {
-    color: lightgray;
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-#container #notice img {
-    background-color: white;
-}
-
-#container #protect {
-    color: lightgray;
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-#container #category {
-    color: white;
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-#container #category #category_thumb {
-    background-color: white;
-}
-
-.main-title {
-    background-color: #2F3336;
-    border-bottom: 1px solid black;
-    padding: 10px 5px;
-    text-align: justify;
-    font-size: large;
-    border-top: 2px solid dodgerblue;
-}
-
-.reply-main-title {
-    background-color: #2F3336; 
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 10px 5px;
-    text-align: justify;
-    font-size: large;
-}
-
-.main-title a {
-    color: white;
-}
-
-.main-title a:hover {
-    color: hotpink;
-}
-
-.main-category {
-    color: gray;
-    font-size: medium;
-
-}
-
-.main-category a {
-    text-decoration: none;
-    color: gray;
-}
-
-.main-category a:hover {
-    text-decoration: none;
-    color: gray;
-}
-
-.main-time {
-    /* font-style: italic; */
-    display: block;
-    background-color: gray;
-    color: white;
-    padding: 5px 10px;
-    text-align: right;
-}
-
-.main-contents {
-    display: relative;
-    text-align: justify;
-	font-size: large; 
-    line-height: 1.5;
-	font-family: 'NEXON Lv1 Gothic OTF';
-}
-
-.main-contents a {
-    text-decoration: underline;
-}
-
-
-#container .comment {
-    text-align: justify;
-    font-size: large;
-    line-height: 1.5;
-	font-family: 'NEXON Lv1 Gothic OTF'; 
-} 
-
-#container .comment a {
-    color: lightgray;
-}
-
-#container .comment a:hover {
-    color: hotpink;
-}
-
-
-.commentWrite {
-    background-color: white;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px !important;
-    width: 300px;
-}
-
-#container .comment .commentList {
-    color: lightgray;
-    text-align: justify;
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    font-size: 16px;
-}
-
-#container .comment .commentList > ol {
-    list-style: none;
-    padding-left: 0;
-}
-
-#container .comment .commentList > ol > li {
-    list-style: none;
-    padding-left: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#container .comment .commentList > ol > li > ul {
-    padding-left: 20px;
-}
-
-#container .comment .commentList > ol > li > ul > li {
-    list-style: none;
-    padding-left: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 5px;
-}
-
-#reply-note {
-    display: inline-block;
-    margin: 20px auto 0 auto;
-    max-width: 800px;
-    padding: 20px;
-    background-color: lightgoldenrodyellow;
-    text-decoration: underline;
-    text-underline-position: under;
-    color: black;
-    text-align: justify;
-    
-}
-
-.postit {
-	border: 1px solid gray;
-    font-size: 16px;
-	display: block;
-	position: relative;
-	cursor: pointer;
-    background-color: #f6e214;
-    color: black;
-    padding-top: 15px;
-}
-
-.postit div {
-    padding: 5px;
-    border-bottom: 1px solid gray;
-}
-
-.postit:hover::before {
-	border-bottom: 15px solid dodgerblue;
-}
-
-.postit::before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	right: 0;
-    width: 0;
-	border-bottom: 15px solid gray;
-	border-left: 15px solid rgba(0, 0, 0, 0);
-}
-
-/* 방명록 디자인 시작 */
-#container #guest {
-    text-align: justify;
-    font-size: large; 
-    line-height: 1.5;
-	font-family: 'NEXON Lv1 Gothic OTF';
-} 
-
-#container #guest a {
-    color: lightgray;
-}
-
-#container #guest a:hover {
-    color: hotpink;
-}
-
-
-#container #guest #guest_list {
-    text-align: justify;
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    color: lightgray;
-    font-size: 16px;
-}
-
-#container #guest #guest_list > ol {
-    padding-left: 0;
-    list-style: none;
-    margin: 0;
-
-}
-
-#container #guest #guest_list > ol > li {
-    padding-left: 0;
-    list-style: none;
-    margin: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-}
-
-#container #guest #guest_list > ol > li > ul {
-    padding-left: 20px;
-}
-
-#container #guest #guest_list > ol > li > ul > li {
-    list-style: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 5px;
-}
-/* 방명록 디자인 끝 */
-
-/*포스팅 본문 내에서 카테고리 내 다른 글 안보이게 하기. 깔끔하게 만들기 위해서.*/
-.another_category {     
-    display: none;
-}
-
-#container #category a {
-    color: lightgray;
-}
-
-#container #category a:hover {
-    color: hotpink;
-}
-
-#container #category #category_in_list > ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-#container #category #category_in_list > ul > li {
-    border-bottom: solid 1px #EAECEF;
-    margin-bottom: 5px;
-    text-align: justify;
-}
-
-
-.tagTrail {
-    font-size: 16px;
-    text-align:right;
-    color: dodgerblue;
-}
-
-.tagTrail a {
-    text-decoration: none;
-}
-
-.tagTrail a:before {
-    content: '#';
-}
-
-#container #tags {
-    text-align: justify;
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-#container #tags > ul {
-    padding-left: 0;
-}
-
-#container #tags > ul > li {
-    list-style: none;
-    display: inline-block;
-}
-
-#paging a {
-    text-decoration: none;
-    font-size: large;
-    color: white;
-    cursor: pointer;
-}
-
-#paging a:hover {
-    font-size: larger;
-}
-
-#paging .selected {
-    font-weight: bold;
-    font-size: larger;
-}
-
-#copy {
-    display: block;
-    background-color: gray;
-    color: white;
-    padding: 5px 10px;
-}
-
-#copy a {
-    color: white;
-}
-
-.og-text {
-    background-color: white;
-}
-
-.reply-linux {
-    color:#4791CF;
-    font-weight: bold;
-}
-
-.reply-linux a {
-    color:#4791CF !important; 
-    font-weight: bold;
-}
-
-.reply-linux1 {
-    color:#B86E30;
-    font-weight: bold;
-}
-
-.reply-linux1 a {
-    color:#B86E30 !important;
-    font-weight: bold;
-}
-
-.reply-linux2 {
-    color:#4791CF;
-    font-weight: bold;
-}
-
-.reply-linux2 a {
-    color:#4791CF;
-    font-weight: bold;
-}
-
-.address {
-    color: #93C25C !important;
-} 
-
-.write {
-    color: #93C25C !important;
-}
-
-.modify {
-    color: #93C25C !important;
-}
-
 .tistoryProfileLayerTrigger {
     display: none !important;
 }
 
-.rp_input_form, .guest_input_form {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed; 
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 999;
+.tt_box_namecard {
+    /* 포스트 하단에 위치한 티스토리에서 지원하는 블로그 소개 카드 */
+    display: none !important;
 }
 
-/* 버튼 디자인 시작 */
-/* 사이드바 열기 버튼 */
+/* adsense 영역 */
+.ap_container {
+    /* 애드센스 자동광고 여백주기 */
+    margin-top: 20px;
+}
 
-
-/* 댓글, 방명록 작성 버튼 */
-.btn {
-    display: block;
-    cursor: pointer;
-    width: 100%;
-    background-color: #1E5BBC;
-    border: none;
+/* bskyvision only */
+.convert-domain a:hover {
     color: white;
-    margin: 0;
-    padding: 5px;
-    font-size: large;
 }
-
-/* 제출 버튼 */
-.btn-submit {
-    display: block;
-    cursor: pointer;
-    width: 100%;
-    border: 1px gray solid;
-    border-radius: 0;
-    background-color: lightgray;
-    color: black;
-    margin: 5px 0;
-    font-size: medium;
-    font-weight: 400;
-    /* box-shadow: lightgrey 1px 1px 5px 1px; */
-}
-/* 버튼 디자인 끝 */
 
 /* 반응형 */
 @media (max-width:1200px){
-    /* header 영역 */
     .header-nav {
         display: none;
     }
@@ -1000,3 +846,4 @@ a:hover {
         margin-top: 50px;
     }    
 }
+
