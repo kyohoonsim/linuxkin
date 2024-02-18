@@ -792,7 +792,11 @@
                 $("#copyright").css({"color":"black"});
                 $("#copyright a").css({"color":"black"});
                 $("#switchMode").css({"color":"yellow"});
-                $("#switchMode").html("<i id='bulb' class=" + "'fas fa-lightbulb' title=" + "'다크모드로 전환' onclick=" + "'toDarkMode();'></i>");
+                $("#bulb").attr({
+                    "class": "fas fa-lightbulb", // fas는 꽉 찬 전구
+                    "title": "다크모드로 전환",
+                    "onclick": "toDarkMode();"
+                })
             };
 
             function toDarkMode(){
@@ -810,7 +814,11 @@
                 $("#copyright").css({"color":"lightgray"});
                 $("#copyright a").css({"color":"lightgray"});
                 $("#switchMode").css({"color":"lightgray"});
-                $("#switchMode").html("<i id='bulb' class=" + "'far fa-lightbulb' title=" + "'라이트모드로 전환' onclick=" + "'toLightMode();'></i>");
+                $("#bulb").attr({
+                    "class": "far fa-lightbulb", // far은 속이 빈 전구
+                    "title": "라이트모드로 전환",
+                    "onclick": "toLightMode();"
+                })
             };
 
             function js_Load(){
