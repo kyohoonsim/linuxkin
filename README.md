@@ -1,6 +1,8 @@
 # LinuXkin
 
-## 개발자를 위한 티스토리 반응형 스킨, 리눅스킨(LinuXkin)입니다
+> 개발자를 위한 티스토리 반응형 스킨, 리눅스킨(LinuXkin)입니다
+
+## 리눅스킨 소개
 
 ![리눅스킨](./preview.gif)
 ![preview1](https://user-images.githubusercontent.com/58966525/186295559-d92a5289-2f02-4884-8866-a0648231e835.png)
@@ -16,9 +18,34 @@
 
 - HTML, JavaScript, JQuery, CSS
 
-## 티스토리 스킨 제작에 도움이 되는 웹페이지
+## 티스토리 스킨 제작에 도움이 되는 사이트
 
 - 티스토리 스킨 가이드: <https://tistory.github.io/document-tistory-skin/>
+
+## 리눅스킨 개발 표준 정책
+
+1. 인라인 CSS를 사용을 권장하지 않는다. 불가피한 상황에서만 사용한다.
+
+2. 네이밍 룰에 따라 id, class, js 함수, 변수 등의 이름을 짓는다.
+    - id: `camelCase` 방식. ex) btnSubmit
+    - class: 소문자 단어들을 `하이픈(-)`으로 잇는 방식. ex) btn-submit
+
+3. id는 이벤트 바인딩 등 js 로직에 사용하고, class는 스타일에 사용되게 한다.
+
+4. css 파일에서 스타일 지정을 위해 id를 사용하지 않는다.
+
+5. id나 class를 만들 때 해당 요소의 역할이 가장 앞에 오게 한다.
+    - ex) btnSubmit
+
+6. UI 컴포넌트에 약어를 사용한다.
+    - button: btn
+    - input box: ipt
+    - textarea: ta
+    - input box 중 체크박스: chk
+    - label: lb
+
+7. copyright는 다음과 같이 표기한다.
+    - Copyright 2024. 블로그명. all rights reserved. Designed by bskyvision.
 
 ## 제작자 정보
 
@@ -33,9 +60,9 @@
 
 감사의 인사를 전달드립니다.
 
-## 혹시 파이썬 공부하고 싶은 분들께
+## 광고
 
-제가 쓴 <쓸모있는 파이썬 프로그램 40개>를 추천드립니다.
+파이썬을 배우고 싶은 분들은 제가 쓴 책으로 한 번 공부해보실래요? <쓸모있는 파이썬 프로그램 40개>
 
 ### 구매처
 
