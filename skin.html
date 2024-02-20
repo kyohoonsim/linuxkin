@@ -31,7 +31,7 @@
         </script> 
 
     </head>
-    <body style="visibility: hidden;" onload="js_Load()">
+    <body>
         <s_t3>
             <header id="header" class="header">
                 <div>
@@ -224,16 +224,16 @@
                                                 var Mode = localStorage["Mode"];
 
                                                 if (Mode != "DarkMode" && Mode != "LightMode") {
-                                                    $("#comment a").css({"color":"lightgray"});
-                                                    $("#commentList").css({"color":"lightgray"});
+                                                    $(".comment a").css({"color":"lightgray"});
+                                                    $(".comment-list").css({"color":"lightgray"});
                                                 }
                                                 if (Mode == "DarkMode"){
-                                                    $("#comment a").css({"color":"lightgray"});
-                                                    $("#commentList").css({"color":"lightgray"});
+                                                    $(".comment a").css({"color":"lightgray"});
+                                                    $(".comment-list").css({"color":"lightgray"});
                                                 } 
                                                 if (Mode == "LightMode"){
-                                                    $("#comment a").css({"color":"black"});
-                                                    $("#commentList").css({"color":"black"});
+                                                    $(".comment a").css({"color":"black"});
+                                                    $(".comment-list").css({"color":"black"});
                                                 }
                                             }
                                         </script>
@@ -782,10 +782,10 @@
                 localStorage["Mode"] = "LightMode";
                 $("#article").css({"background-color":"white"});
                 $("#postList a ").css({"color":"black"});
-                $("#post").css({"color":"black"});
-                $("#protect").css({"color":"black"});
-                $("#comment a").css({"color":"black"});
-                $("#commentList").css({"color":"black"});
+                $(".post").css({"color":"black"}); // post 요소는 화면에서 다수일 수 있음
+                $(".protect").css({"color":"black"}); // protect 요소는 화면에서 다수일 수 있음
+                $(".comment a").css({"color":"black"}); // comment 요소는 화면에서 다수일 수 있음
+                $(".comment-list").css({"color":"black"}); // comment-list 요소는 화면에서 다수일 수 있음
                 $("#guest a").css({"color":"black"});
                 $("#guestList").css({"color":"black"});
                 $("#paging a").css({"color":"black"});
@@ -804,10 +804,10 @@
                 localStorage["Mode"] = "DarkMode";
                 $("#article").css({"background-color":"#141617"});
                 $("#postList a ").css({"color":"lightgray"});
-                $("#post").css({"color":"lightgray"});
-                $("#protect").css({"color":"lightgray"});
-                $("#comment a").css({"color":"lightgray"});
-                $("#commentList").css({"color":"lightgray"});
+                $(".post").css({"color":"lightgray"});
+                $(".protect").css({"color":"lightgray"});
+                $(".comment a").css({"color":"lightgray"});
+                $(".comment-list").css({"color":"lightgray"});
                 $("#guest a").css({"color":"lightgray"});
                 $("#guestList").css({"color":"lightgray"});
                 $("#paging a").css({"color":"white"});
@@ -820,10 +820,6 @@
                     "onclick": "toLightMode();"
                 })
             };
-
-            function js_Load(){
-                document.body.style.visibility='visible';
-            }
 
             function openReplyInputDiv(){
                 $("#replyInputForm").css('display', 'block');
