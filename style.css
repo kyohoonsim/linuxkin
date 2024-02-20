@@ -786,6 +786,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     display: none !important;
 }
 
+.og-text {
+    /* 포스트 내 링크로 인해 표현되는 카드 */
+    background-color: white !important;
+}
+
 /* adsense 영역 */
 .ap_container {
     /* 애드센스 자동광고 여백주기 */
