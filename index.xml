@@ -2,7 +2,7 @@
 <skin>
 <information>
 <name>리눅스킨 LinuXkin</name> 
-<version>4.3.8</version>
+<version>4.4.0</version>
 <description>
 <![CDATA[ HTML5, CSS3 기반으로 만들어진 Tistory 스킨입니다.]]>
 </description>
@@ -29,7 +29,7 @@
 <lengthOfRecentComment>50</lengthOfRecentComment> 
 <lengthOfRecentTrackback>50</lengthOfRecentTrackback> 
 <lengthOfLink>20</lengthOfLink>
-<showListOnCategory>1</showListOnCategory>
+<showListOnCategory>1</showListOnCategory> <!-- 커버 미사용 홈에서 글 목록 표현(0:내용만, 1:목록만, 2: 내용+목록) -->
 <showListOnArchive>1</showListOnArchive> 
 <commentMessage>
 <none>댓글이 없습니다.</none> 
