@@ -29,7 +29,7 @@
 <lengthOfRecentComment>50</lengthOfRecentComment> 
 <lengthOfRecentTrackback>50</lengthOfRecentTrackback> 
 <lengthOfLink>20</lengthOfLink>
-<showListOnCategory>0</showListOnCategory> <!-- 커버 미사용 홈에서 글 목록 표현(0:내용만, 1:목록만, 2: 내용+목록) -->
+<showListOnCategory>1</showListOnCategory> <!-- 커버 미사용 홈에서 글 목록 표현(0:내용만, 1:목록만, 2: 내용+목록) -->
 <showListOnArchive>0</showListOnArchive> 
 <commentMessage>
 <none>댓글이 없습니다.</none> 
